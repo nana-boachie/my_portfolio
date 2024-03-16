@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+<h1>home</h1>
+
+
+<div>
+    <div>
+        {% for relayroom in relayrooms %}
+        <div>
+           <h5>{{relayroom.id}}  -- <a href="{% url 'relayroom' relayroom.id%}"> {{relayroom.name}}</a> </h5>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+
+{% endblock content %}
