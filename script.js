@@ -28,7 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
-                const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                // Get navbar height if it exists, otherwise use 0
+                const navbar = document.querySelector('.navbar');
+                const navbarHeight = navbar ? navbar.offsetHeight : 0;
                 const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
                 
                 window.scrollTo({
@@ -40,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const navbarToggler = document.querySelector('.navbar-toggler');
                 const navbarCollapse = document.querySelector('.navbar-collapse');
                 
-                if (navbarCollapse.classList.contains('show')) {
+                if (navbarCollapse && navbarToggler && navbarCollapse.classList.contains('show')) {
                     navbarToggler.click();
                 }
             }
