@@ -17,17 +17,53 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     <main class="main-content">
-        <section id="home" class="hero py-4">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Yiadom</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/sections/about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/sections/projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/sections/certifications.html">Certifications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/sections/skills.html">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/sections/contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero py-5">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <div class="col-md-4 text-center mb-4 mb-md-0">
                         <img src="images/profile-placeholder.jpg" alt="Yiadom" class="img-fluid shadow-lg rounded-circle" width="250" height="250" loading="lazy" style="border: 3px solid white; aspect-ratio: 1;">
                     </div>
                     <div class="col-md-8 text-center text-md-start">
                         <h1 class="display-4 fw-bold">Nana Kwame Yiadom Boachie</h1>
                         <p class="lead mb-4">Electrical Engineer | IT Expert</p>
-                        <div class="d-flex justify-content-center justify-content-md-start gap-2 rounded ">
-                            <a href="#contact" class="btn btn-primary">Contact Me</a>
+                        <div class="d-flex justify-content-center justify-content-md-start gap-2 rounded">
+                            <a href="pages/sections/contact.html" class="btn btn-primary">Contact Me</a>
                             <a href="pages/blog.html" class="btn btn-outline-light">View My Blog</a>
                         </div>
                     </div>
@@ -35,246 +71,91 @@
             </div>
         </section>
 
-        <section id="about" class="section py-5">
+        <!-- Portfolio Sections Preview -->
+        <section class="section py-5">
             <div class="container">
-                <h2 class="text-center mb-4">About Me</h2>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <p class="lead">Hi, I'm a Power Systems Protection Engineer at GRIDCo, where I specialize in programming and protection systems. Programming is my hobby, and I find joy in solving IT issues. I'm passionate about combining my technical expertise with creative problem-solving.</p>
+                <h2 class="text-center mb-5">Welcome to My Portfolio</h2>
+                <div class="row g-4">
+                    <!-- About Section Preview -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow hover-card">
+                            <div class="card-body text-center">
+                                <div class="section-icon mb-3">
+                                    <i class="fas fa-user fa-3x text-primary"></i>
+                                </div>
+                                <h3 class="card-title h4">About Me</h3>
+                                <p class="card-text">Learn more about my background, experience, and what drives my passion for electrical engineering and IT.</p>
+                                <a href="pages/sections/about.html" class="btn btn-outline-primary mt-3">View Details</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="projects" class="section py-5">
-            <div class="container">
-                <h2 class="text-center mb-4">Professional Experience</h2>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="card mb-4 shadow-sm">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-3 mb-3 mb-md-0">
-                                        <img src="images/project-image-1.png" alt="PMU/PDC Project" class="img-fluid rounded" loading="lazy">
-                                    </div>
-                                    <div class="col-md-9 rounded">
-                                        <h3 class="card-title">PMU/PDC Installation & Configuration</h3>
-                                        <p class="card-text">Successfully joined the installation and configuration of PMU (Phasor Measurement Unit) and PDC (Phasor Data Concentrator) systems across 10 GRIDCo substations. Implemented real-time monitoring and data collection systems for enhanced grid stability and reliability.</p>
-                                        <div class="tech-stack">
-                                            <span class="badge bg-primary">PMU Systems</span>
-                                            <span class="badge bg-primary">PDC Configuration</span>
-                                            <span class="badge bg-primary">Substation Automation</span>
-                                            <span class="badge bg-primary">Grid Monitoring</span>
-                                        </div>
-                                    </div>
+                    <!-- Projects Section Preview -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow hover-card">
+                            <div class="card-body text-center">
+                                <div class="section-icon mb-3">
+                                    <i class="fas fa-project-diagram fa-3x text-success"></i>
                                 </div>
+                                <h3 class="card-title h4">Projects</h3>
+                                <p class="card-text">Explore my professional experience and key projects in electrical engineering and IT fields.</p>
+                                <a href="pages/sections/projects.html" class="btn btn-outline-success mt-3">View Projects</a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="certifications" class="section py-5">
-            <div class="container">
-                <h2 class="text-center mb-4">Certifications</h2>
-                <div class="row">
-                    <div class="col-lg-6 mb-4">
-                        <div class="card rounded">
-                            <div class="card-body">
-                                <h3 class="card-title">Google IT Support Professional Certificate</h3>
-                                <p class="card-text">Completed comprehensive training in IT support fundamentals, networking, and system administration.</p>
+                    <!-- Certifications Section Preview -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow hover-card">
+                            <div class="card-body text-center">
+                                <div class="section-icon mb-3">
+                                    <i class="fas fa-certificate fa-3x text-warning"></i>
+                                </div>
+                                <h3 class="card-title h4">Certifications</h3>
+                                <p class="card-text">View my professional certifications and qualifications in electrical engineering and IT support.</p>
+                                <a href="pages/sections/certifications.html" class="btn btn-outline-warning mt-3">View Certifications</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 mb-4">
-                        <div class="card rounded">
-                            <div class="card-body">
-                                <h3 class="card-title">Google Networking Certificate</h3>
-                                <p class="card-text">Expertise in network infrastructure, security, and troubleshooting.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="skills" class="section py-5">
-            <div class="container">
-                <h2 class="text-center mb-4">Skills</h2>
-                <p class="text-center mb-5 lead">A visualization of my technical expertise across different domains</p>
-                
-                <!-- Web Development Skills -->
-                <div class="skill-category mb-5">
-                    <h3 class="h4 mb-4"><i class="fas fa-code text-primary me-2"></i>Web Development</h3>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="skill-item mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="skill-name mb-1">HTML</h5>
-                                    <span class="skill-percentage">90%</span>
+                    <!-- Skills Section Preview -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow hover-card">
+                            <div class="card-body text-center">
+                                <div class="section-icon mb-3">
+                                    <i class="fas fa-chart-bar fa-3x text-danger"></i>
                                 </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="skill-item mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="skill-name mb-1">CSS</h5>
-                                    <span class="skill-percentage">85%</span>
-                                </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="skill-item mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="skill-name mb-1">JavaScript</h5>
-                                    <span class="skill-percentage">80%</span>
-                                </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="skill-item mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="skill-name mb-1">Responsive Design</h5>
-                                    <span class="skill-percentage">85%</span>
-                                </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="skill-item mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="skill-name mb-1">Bootstrap</h5>
-                                    <span class="skill-percentage">90%</span>
-                                </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                                <h3 class="card-title h4">Skills</h3>
+                                <p class="card-text">See a detailed visualization of my technical skills across web development, electrical engineering, and IT support.</p>
+                                <a href="pages/sections/skills.html" class="btn btn-outline-danger mt-3">View Skills</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Electrical Engineering Skills -->
-                <div class="skill-category mb-5">
-                    <h3 class="h4 mb-4"><i class="fas fa-bolt text-warning me-2"></i>Electrical Engineering</h3>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="skill-item mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="skill-name mb-1">Power Systems Protection</h5>
-                                    <span class="skill-percentage">95%</span>
+
+                    <!-- Blog Section Preview -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow hover-card">
+                            <div class="card-body text-center">
+                                <div class="section-icon mb-3">
+                                    <i class="fas fa-blog fa-3x text-info"></i>
                                 </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="skill-item mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="skill-name mb-1">PMU/PDC Systems</h5>
-                                    <span class="skill-percentage">90%</span>
-                                </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="skill-item mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="skill-name mb-1">Substation Automation</h5>
-                                    <span class="skill-percentage">85%</span>
-                                </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="skill-item mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="skill-name mb-1">Grid Monitoring</h5>
-                                    <span class="skill-percentage">85%</span>
-                                </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                                <h3 class="card-title h4">Blog</h3>
+                                <p class="card-text">Read my latest articles, tutorials, and insights on electrical engineering, IT, and programming topics.</p>
+                                <a href="pages/blog.html" class="btn btn-outline-info mt-3">Read My Blog</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- IT Support Skills -->
-                <div class="skill-category mb-5">
-                    <h3 class="h4 mb-4"><i class="fas fa-desktop text-success me-2"></i>IT Support</h3>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="skill-item mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="skill-name mb-1">Networking</h5>
-                                    <span class="skill-percentage">90%</span>
+
+                    <!-- Contact Section Preview -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 shadow hover-card">
+                            <div class="card-body text-center">
+                                <div class="section-icon mb-3">
+                                    <i class="fas fa-envelope fa-3x text-primary"></i>
                                 </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="skill-item mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="skill-name mb-1">System Administration</h5>
-                                    <span class="skill-percentage">85%</span>
-                                </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="skill-item mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="skill-name mb-1">Troubleshooting</h5>
-                                    <span class="skill-percentage">95%</span>
-                                </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="skill-item mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="skill-name mb-1">Security</h5>
-                                    <span class="skill-percentage">80%</span>
-                                </div>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Skills Chart -->
-                <div class="row justify-content-center mt-5">
-                    <div class="col-lg-8">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                <h3 class="h4 mb-4 text-center">Skills Overview</h3>
-                                <canvas id="skillsRadarChart" width="400" height="300"></canvas>
+                                <h3 class="card-title h4">Contact</h3>
+                                <p class="card-text">Get in touch with me for professional inquiries, collaborations, or just to say hello!</p>
+                                <a href="pages/sections/contact.html" class="btn btn-outline-primary mt-3">Contact Me</a>
                             </div>
                         </div>
                     </div>
@@ -282,35 +163,20 @@
             </div>
         </section>
 
-        <section id="contact" class="contact section py-5">
-            <div class="container">
-                <h2 class="text-center mb-4">Contact Me</h2>
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                        <div class="contact-info rounded">
-                            <p><strong>Phone:</strong> +233 55 9808201</p>
-                            <p><strong>Email:</strong> nana.kwame.yiadom@gmail.com</p>
-                            <p><strong>LinkedIn:</strong> linkedin.com/in/NanaKwameYiadomBoachie</p>
-                            <p><strong>GitHub:</strong> github.com/nana-boachie</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer class="footer bg-light py-4">
+        <!-- Footer -->
+        <footer class="footer bg-dark text-white py-4 mt-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-6 mb-3 mb-md-0">
                         <div class="social-links">
-                            <a href="https://x.com/theloved_1" target="_blank" class="d-block mb-2"><i class="fab fa-twitter me-2"></i>theloved_1</a>
-                            <a href="https://facebook.com/NanaKwameYiadomBoachie" target="_blank" class="d-block mb-2"><i class="fab fa-facebook me-2"></i>Nana Kwame Yiadom Boachie</a>
-                            <a href="https://github.com/nana-boachie" target="_blank" class="d-block mb-2"><i class="fab fa-github me-2"></i>nana-boachie</a>
-                            <a href="https://linkedin.com/in/NanaKwameYiadomBoachie" target="_blank" class="d-block mb-2"><i class="fab fa-linkedin me-2"></i>Nana Kwame Yiadom Boachie</a>
+                            <a href="https://x.com/theloved_1" target="_blank" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                            <a href="https://facebook.com/NanaKwameYiadomBoachie" target="_blank" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                            <a href="https://github.com/nana-boachie" target="_blank" class="text-white me-3"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com/in/NanaKwameYiadomBoachie" target="_blank" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                     <div class="col-md-6 text-md-end">
-                        <p>&copy; 2025 Yiadom. All rights reserved.</p>
+                        <p class="mb-0">&copy; 2025 Nana Kwame Yiadom Boachie. All rights reserved.</p>
                     </div>
                 </div>
             </div>
@@ -321,6 +187,24 @@
     <button class="btn btn-primary rounded-circle position-fixed back-to-top" id="back-to-top">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Custom JavaScript -->
     <script src="script.js"></script>
+
+    <style>
+        .hover-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+        .section-icon {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </body>
 </html>
