@@ -105,3 +105,59 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Skills Radar Chart
+document.addEventListener('DOMContentLoaded', function() {
+    const skillsRadarChart = document.getElementById('skillsRadarChart');
+    
+    if (skillsRadarChart) {
+        // Create radar chart for skills
+        new Chart(skillsRadarChart, {
+            type: 'radar',
+            data: {
+                labels: ['Web Development', 'Electrical Engineering', 'IT Support', 'Troubleshooting', 'System Administration', 'Security'],
+                datasets: [{
+                    label: 'Expertise Level',
+                    data: [85, 90, 88, 95, 85, 80],
+                    fill: true,
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgb(54, 162, 235)',
+                    pointBackgroundColor: 'rgb(54, 162, 235)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(54, 162, 235)'
+                }]
+            },
+            options: {
+                elements: {
+                    line: {
+                        borderWidth: 3
+                    }
+                },
+                scales: {
+                    r: {
+                        angleLines: {
+                            display: true
+                        },
+                        suggestedMin: 50,
+                        suggestedMax: 100
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + context.formattedValue + '%';
+                            }
+                        }
+                    }
+                },
+                responsive: true,
+                maintainAspectRatio: true
+            }
+        });
+    }
+});
