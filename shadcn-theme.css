@@ -1,16 +1,18 @@
-/* shadcn-inspired theme CSS */
+/* Glass UI Theme based on shadcn */
 :root {
   /* Base colors */
   --background: 240 10% 3.9%;
   --foreground: 0 0% 98%;
   
-  /* Cards */
-  --card: 240 10% 3.9%;
-  --card-foreground: 0 0% 98%;
+  /* Glass effect colors */
+  --glass-bg: 240 10% 10% / 0.7;
+  --glass-border: 0 0% 100% / 0.1;
+  --glass-highlight: 0 0% 100% / 0.1;
+  --glass-shadow: 0 0% 0% / 0.3;
   
-  /* Popover */
-  --popover: 240 10% 3.9%;
-  --popover-foreground: 0 0% 98%;
+  /* Cards */
+  --card: 240 10% 3.9% / 0.7;
+  --card-foreground: 0 0% 98%;
   
   /* Primary (purple) */
   --primary: 270 50% 35%;
@@ -63,8 +65,12 @@ body {
   font-feature-settings: "rlig" 1, "calt" 1;
 }
 
-/* Remove space above navbar */
+/* Base HTML and body resets with gradient background for glass effect */
 html, body {
+  scroll-behavior: smooth;
+  background: linear-gradient(135deg, hsl(260, 100%, 2%), hsl(290, 100%, 6%), hsl(230, 100%, 4%));
+  background-attachment: fixed;
+  min-height: 100vh;
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -74,54 +80,95 @@ body > main, body > main.main-content {
   padding-top: 0 !important;
 }
 
-/* Navigation styling */
+/* Glass Navigation styling */
 nav.bg-gray-900 {
-  background-color: hsl(var(--background));
-  border-bottom: 1px solid hsl(var(--border));
+  background-color: hsla(var(--glass-bg));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid hsla(var(--glass-border));
+  box-shadow: 0 4px 30px hsla(var(--glass-shadow));
 }
 
-/* Card styling */
+/* Glass Card styling */
 .card {
-  background-color: hsl(var(--card));
-  border-color: hsl(var(--border));
+  background-color: hsla(var(--glass-bg));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid hsla(var(--glass-border));
   border-radius: var(--radius);
+  box-shadow: 0 8px 32px 0 hsla(var(--glass-shadow));
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glass card hover effect with light reflection */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px 0 hsla(var(--glass-shadow));
+  border-color: hsla(var(--glass-highlight) / 0.5);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, hsla(var(--glass-highlight) / 0.1) 0%, transparent 80%);
+  transform: rotate(30deg);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.card:hover::before {
+  opacity: 1;
 }
 
 .card-header {
   border-bottom-color: hsl(var(--border));
 }
 
-/* Button styling */
+/* Glass Button styling */
 .btn {
   border-radius: var(--radius);
   font-weight: 500;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px 0 hsla(var(--glass-shadow));
 }
 
 .btn-primary, 
 button[style*="background-color: var(--secondary-color)"] {
-  background-color: hsl(var(--primary));
+  background-color: hsla(var(--primary) / 0.7);
   color: hsl(var(--primary-foreground));
-  border: none;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid hsla(var(--glass-border));
 }
 
 .btn-primary:hover, 
 button[style*="background-color: var(--secondary-color)"]:hover {
-  background-color: hsl(var(--primary));
-  opacity: 0.9;
+  background-color: hsla(var(--primary) / 0.8);
+  box-shadow: 0 5px 20px 0 hsla(var(--glass-shadow));
+  transform: translateY(-2px);
 }
 
-/* Form controls */
+/* Glass Form controls */
 .form-control {
-  background-color: transparent;
-  border-color: hsl(var(--border));
+  background-color: hsla(var(--glass-bg) / 0.3);
+  border: 1px solid hsla(var(--glass-border));
   border-radius: var(--radius);
   color: hsl(var(--foreground));
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
 }
 
 .form-control:focus {
-  border-color: hsl(var(--ring));
-  box-shadow: 0 0 0 2px hsla(var(--ring), 0.2);
+  border-color: hsla(var(--ring) / 0.7);
+  box-shadow: 0 0 0 3px hsla(var(--ring), 0.3);
+  background-color: hsla(var(--glass-bg) / 0.5);
 }
 
 /* Typography */
@@ -131,35 +178,50 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-/* Social link buttons */
+/* Glass Social link buttons */
 .social-links a {
-  background-color: transparent;
-  border: 1px solid hsl(var(--border));
+  background-color: hsla(var(--glass-bg) / 0.3);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid hsla(var(--glass-border));
   border-radius: var(--radius);
   color: hsl(var(--muted-foreground));
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px 0 hsla(var(--glass-shadow) / 0.3);
 }
 
 .social-links a:hover {
-  background-color: hsl(var(--accent) / 0.1);
+  background-color: hsla(var(--accent) / 0.2);
+  border-color: hsla(var(--accent) / 0.3);
   color: hsl(var(--accent));
+  transform: translateY(-3px);
+  box-shadow: 0 7px 15px 0 hsla(var(--glass-shadow) / 0.4);
 }
 
-/* Footer */
+/* Glass Footer */
 footer.bg-gray-900 {
-  background-color: hsl(var(--background));
-  border-top: 1px solid hsl(var(--border));
+  background-color: hsla(var(--glass-bg) / 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid hsla(var(--glass-border));
+  box-shadow: 0 -4px 20px hsla(var(--glass-shadow));
 }
 
-/* Back to top button */
+/* Glass Back to top button */
 #back-to-top {
-  background-color: hsl(var(--primary));
+  background-color: hsla(var(--primary) / 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid hsla(var(--glass-highlight));
   border-radius: 9999px;
+  box-shadow: 0 5px 15px hsla(var(--glass-shadow));
+  transition: all 0.3s ease;
 }
 
 #back-to-top:hover {
-  background-color: hsl(var(--primary));
-  opacity: 0.9;
+  background-color: hsla(var(--primary) / 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px hsla(var(--glass-shadow));
 }
 
 /* Divider */
