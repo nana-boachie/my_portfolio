@@ -22,16 +22,27 @@
   border-color: var(--secondary-color) !important;
 }
 
-/* Fix space above navbar */
-body {
+/* Fix space above navbar - with stronger selectors */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body > main, body > main.main-content {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-nav {
+nav, .bg-gray-900.sticky {
   margin-top: 0 !important;
   padding-top: 0 !important;
   top: 0 !important;
+}
+
+/* Remove any potential Bootstrap container margins */
+.container-fluid, .container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 /* Ensure text is visible with good contrast */
