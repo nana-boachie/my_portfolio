@@ -50,9 +50,10 @@ To make changes to the site:
 1. Edit the HTML files in the root directory and `pages` folder
 2. Modify global styles in `styles.css`
 3. Edit the purple theme in `purple-theme.css` to change color scheme or contrast
-4. For UI components like navigation and footer, edit the `ui-components.js` file
-5. Update general JavaScript functionality in `script.js`
-6. Tailwind CSS is loaded via CDN for responsive UI components
+4. Adjust the shadcn-inspired theme in `shadcn-theme.css` for modern UI components styling
+5. For UI components like navigation and footer, edit the `ui-components.js` file
+6. Update general JavaScript functionality in `script.js`
+7. Tailwind CSS is loaded via CDN for responsive UI components
 
 ## License
 

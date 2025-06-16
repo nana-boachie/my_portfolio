@@ -1,0 +1,197 @@
+/* shadcn-inspired theme CSS */
+:root {
+  /* Base colors */
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  
+  /* Cards */
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  
+  /* Popover */
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  
+  /* Primary (purple) */
+  --primary: 270 50% 35%;
+  --primary-foreground: 0 0% 98%;
+  
+  /* Secondary */
+  --secondary: 270 35% 45%;
+  --secondary-foreground: 0 0% 98%;
+  
+  /* Muted */
+  --muted: 240 5% 64.9%;
+  --muted-foreground: 240 5% 84.9%;
+  
+  /* Accent */
+  --accent: 270 40% 60%;
+  --accent-foreground: 0 0% 98%;
+  
+  /* Destructive */
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  
+  /* Border and ring */
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 270 50% 35%;
+  
+  /* Actual color values for easier use */
+  --background-color: hsl(240, 10%, 3.9%);
+  --foreground-color: hsl(0, 0%, 98%);
+  --card-color: hsl(240, 10%, 3.9%);
+  --card-foreground-color: hsl(0, 0%, 98%);
+  --primary-color: hsl(270, 50%, 35%);
+  --primary-foreground-color: hsl(0, 0%, 98%);
+  --secondary-color: hsl(270, 35%, 45%);
+  --secondary-foreground-color: hsl(0, 0%, 98%);
+  --muted-color: hsl(240, 5%, 64.9%);
+  --muted-foreground-color: hsl(240, 5%, 84.9%);
+  --accent-color: hsl(270, 40%, 60%);
+  --accent-foreground-color: hsl(0, 0%, 98%);
+  --border-color: hsl(240, 3.7%, 15.9%);
+  
+  /* Radius */
+  --radius: 0.5rem;
+}
+
+/* Base styling (shadcn-inspired) */
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Remove space above navbar */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body > main, body > main.main-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Navigation styling */
+nav.bg-gray-900 {
+  background-color: hsl(var(--background));
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+/* Card styling */
+.card {
+  background-color: hsl(var(--card));
+  border-color: hsl(var(--border));
+  border-radius: var(--radius);
+}
+
+.card-header {
+  border-bottom-color: hsl(var(--border));
+}
+
+/* Button styling */
+.btn {
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-primary, 
+button[style*="background-color: var(--secondary-color)"] {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border: none;
+}
+
+.btn-primary:hover, 
+button[style*="background-color: var(--secondary-color)"]:hover {
+  background-color: hsl(var(--primary));
+  opacity: 0.9;
+}
+
+/* Form controls */
+.form-control {
+  background-color: transparent;
+  border-color: hsl(var(--border));
+  border-radius: var(--radius);
+  color: hsl(var(--foreground));
+}
+
+.form-control:focus {
+  border-color: hsl(var(--ring));
+  box-shadow: 0 0 0 2px hsla(var(--ring), 0.2);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: hsl(var(--foreground));
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Social link buttons */
+.social-links a {
+  background-color: transparent;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  color: hsl(var(--muted-foreground));
+  transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+  background-color: hsl(var(--accent) / 0.1);
+  color: hsl(var(--accent));
+}
+
+/* Footer */
+footer.bg-gray-900 {
+  background-color: hsl(var(--background));
+  border-top: 1px solid hsl(var(--border));
+}
+
+/* Back to top button */
+#back-to-top {
+  background-color: hsl(var(--primary));
+  border-radius: 9999px;
+}
+
+#back-to-top:hover {
+  background-color: hsl(var(--primary));
+  opacity: 0.9;
+}
+
+/* Divider */
+.divider {
+  background-color: hsl(var(--primary));
+}
+
+/* Links */
+a {
+  color: hsl(var(--primary));
+  text-decoration: none;
+}
+
+a:hover {
+  color: hsl(var(--primary));
+  opacity: 0.8;
+}
+
+nav a {
+  color: hsl(var(--foreground));
+}
+
+nav a:hover {
+  color: hsl(var(--muted));
+}
+
+/* Section styling */
+.section {
+  padding: 3rem 0;
+}
+
+/* Form label */
+.form-label {
+  color: hsl(var(--foreground));
+}
