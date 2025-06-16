@@ -49,29 +49,52 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add active class to nav links based on scroll position
+    // Add active class to nav links based on scroll position or current page
     function updateActiveNavLink() {
-        const sections = document.querySelectorAll('section');
+        const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.nav-link');
         
-        let current = '';
-        
-        sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            const navbarHeight = document.querySelector('.navbar').offsetHeight;
-            
-            if (window.pageYOffset >= sectionTop - navbarHeight - 10) {
-                current = section.getAttribute('id');
-            }
-        });
+        // Check if we're on a specific page and highlight its nav link
+        const currentPath = window.location.pathname;
+        let isSpecificPage = false;
         
         navLinks.forEach((link) => {
+            const href = link.getAttribute('href');
+            if (!href) return;
+            
+            // Remove active class from all links first
             link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === current) {
+            
+            // If current URL path contains the href and it's not just the index or root
+            if (currentPath.includes(href) && href !== '/' && href !== 'index.html' && href.indexOf('#') === -1) {
                 link.classList.add('active');
+                isSpecificPage = true;
             }
         });
+        
+        // If we're not on a specific page, use scroll position for active state
+        if (!isSpecificPage) {
+            let current = '';
+            
+            sections.forEach((section) => {
+                if (!section.id) return;
+                
+                const sectionTop = section.offsetTop;
+                const navbar = document.querySelector('.navbar');
+                const navbarHeight = navbar ? navbar.offsetHeight : 0;
+                
+                if (window.pageYOffset >= sectionTop - navbarHeight - 10) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach((link) => {
+                const href = link.getAttribute('href');
+                if (href && href.includes('#') && href.substring(href.indexOf('#') + 1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        }
     }
     
     window.addEventListener('scroll', updateActiveNavLink);

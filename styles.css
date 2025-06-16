@@ -1,17 +1,23 @@
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
+    --primary-color: #5e3577;
+    --secondary-color: #8e44ad;
     --text-color: #333;
     --light-bg: #f8f9fa;
+    --dark-bg: #2d2d2d;
     
-    /* Blue variations */
-    --blue-dark: #1a237e;
-    --blue-medium: #2196f3;
-    --blue-light: #64b5f6;
-    --blue-aqua: #03a9f4;
-    --blue-cyan: #00bcd4;
-    --blue-indigo: #303f9f;
-    --blue-navy: #0d47a1;
+    /* Purple color palette */
+    --purple-dark: #5e3577;
+    --purple-medium: #8e44ad;
+    --purple-light: #d6b2ed;
+    --purple-lighter: #edd2f8;
+    --purple-accent: #9b59b6;
+    --purple-deep: #4a235a;
+    --purple-subtle: #f5eef8;
+    
+    /* UI state colors */
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --error-color: #e74c3c;
 }
 
 body {
@@ -19,12 +25,12 @@ body {
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--light-bg);
+    color: var(--purple-medium);
+    background-color: var(--purple-medium);
 }
 
 .hero {
-    background: linear-gradient(135deg, var(--blue-medium) 0%, var(--blue-aqua) 100%);
+    background: linear-gradient(135deg, var(--purple-medium) 0%, var(--purple-accent) 100%);
     color: white;
     padding-top: 120px;
     padding-bottom: 80px;
@@ -50,12 +56,12 @@ body {
 }
 
 .nav-link {
-    color: var(--blue-medium) !important;
+    color: var(--purple-medium) !important;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: var(--blue-dark) !important;
+    color: var(--purple-dark) !important;
 }
 
 .main-content {
@@ -73,8 +79,11 @@ body {
     margin-top: 4rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    background-color: var(--light-bg);
-    border-top: 1px solid rgba(0,0,0,0.1);
+    background-color: #212529 !important;
+    color: white !important;
+    display: block;
+    position: relative;
+    width: 100%;
 }
 
 body {
@@ -82,8 +91,8 @@ body {
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--light-bg);
+    color: var(--purple-medium);
+    background-color: var(--purple-medium);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -163,7 +172,7 @@ section {
     display: block;
     width: 25px;
     height: 2px;
-    background: var(--blue-dark);
+    background: var(--purple-dark);
     margin: 5px 0;
     transition: 0.3s;
 }
@@ -177,14 +186,14 @@ section {
 }
 
 .nav a {
-    color: var(--blue-medium);
+    color: var(--purple-medium);
     text-decoration: none;
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
 }
 
 .nav a:hover {
-    color: var(--blue-dark);
+    color: var(--purple-dark);
 }
 
 /* Mobile menu styles */
@@ -231,7 +240,7 @@ section {
 }
 
 .hero {
-    background: linear-gradient(135deg, var(--blue-medium) 0%, var(--blue-aqua) 100%);
+    background: linear-gradient(135deg, var(--purple-medium) 0%, var(--purple-accent) 100%);
     color: white;
     padding: 8rem 0;
     text-align: center;
@@ -268,14 +277,14 @@ section {
 }
 
 .nav a {
-    color: var(--blue-medium);
+    color: var(--purple-medium);
     text-decoration: none;
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
 }
 
 .nav a:hover {
-    color: var(--blue-dark);
+    color: var(--purple-dark);
 }
 
 .back-to-top {
@@ -286,7 +295,7 @@ section {
     width: 40px;
     height: 40px;
     border: none;
-    background: var(--blue-medium);
+    background: var(--purple-medium);
     color: white;
     border-radius: 50%;
     cursor: pointer;
@@ -295,7 +304,7 @@ section {
 
 .back-to-top:hover {
     transform: translateY(-3px);
-    background: var(--blue-dark);
+    background: var(--purple-dark);
 }
 
 .back-to-top svg {
@@ -304,7 +313,7 @@ section {
 }
 
 .hero {
-    background: linear-gradient(135deg, var(--blue-medium) 0%, var(--blue-aqua) 100%);
+    background: linear-gradient(135deg, var(--purple-medium) 0%, var(--purple-accent) 100%);
     color: white;
     padding: 8rem 0;
     text-align: center;
@@ -326,7 +335,7 @@ section {
 }
 
 .section h2 {
-    color: var(--blue-dark);
+    color: var(--purple-dark);
     margin-bottom: 2rem;
 }
 
@@ -336,41 +345,26 @@ section {
     padding: 0 1rem;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--light-bg);
-    scroll-behavior: smooth;
-}
-
-/* Add section indicators */
-section {
-    scroll-margin-top: 80px;
-}
-
-/* Add a subtle animation when sections are in view */
+/* Section styling */
 section.section {
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 1;
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
+/* Optional animation for sections when targeted */
 section.section:target {
-    opacity: 1;
-    transform: translateY(0);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0.8; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .nav {
     background: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    border-bottom: 2px solid var(--blue-medium);
+    border-bottom: 2px solid var(--purple-medium);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
@@ -407,7 +401,7 @@ section.section:target {
     width: 40px;
     height: 40px;
     border: none;
-    background: var(--blue-medium);
+    background: var(--purple-medium);
     color: white;
     border-radius: 50%;
     cursor: pointer;
@@ -416,7 +410,7 @@ section.section:target {
 
 .back-to-top:hover {
     transform: translateY(-3px);
-    background: var(--blue-dark);
+    background: var(--purple-dark);
 }
 
 .back-to-top svg {
@@ -438,12 +432,12 @@ section.section h2::after {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background: var(--blue-medium);
+    background: var(--purple-medium);
     transition: width 0.3s ease;
 }
 
 section.section h2:hover {
-    color: var(--blue-dark);
+    color: var(--purple-dark);
 }
 
 section.section h2:hover::after {
@@ -458,7 +452,7 @@ section.section h2:hover::after {
 }
 
 .nav a {
-    color: var(--blue-medium);
+    color: var(--purple-medium);
     text-decoration: none;
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
@@ -476,21 +470,21 @@ section.section h2:hover::after {
 }
 
 .social-links a {
-    color: var(--blue-medium);
+    color: var(--purple-medium);
     font-size: 0.9rem;
 }
 
 .social-links a:hover {
-    color: var(--blue-dark);
+    color: var(--purple-dark);
     text-decoration: underline;
 }
 
 .nav a:hover {
-    color: var(--blue-dark);
+    color: var(--purple-dark);
 }
 
 .hero {
-    background: linear-gradient(135deg, var(--blue-medium) 0%, var(--blue-aqua) 100%);
+    background: linear-gradient(135deg, var(--purple-medium) 0%, var(--purple-accent) 100%);
     color: white;
     padding: 4rem 0;
     text-align: left;
@@ -524,11 +518,6 @@ section.section h2:hover::after {
     margin-bottom: 1rem;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
 .section {
     padding: 6rem 0;
     background: white;
@@ -536,7 +525,7 @@ section.section h2:hover::after {
 }
 
 .hero {
-    background: linear-gradient(135deg, var(--blue-medium) 0%, var(--blue-aqua) 100%);
+    background: linear-gradient(135deg, var(--purple-medium) 0%, var(--purple-accent) 100%);
     color: white;
     padding: 8rem 0;
     text-align: left;
@@ -573,7 +562,7 @@ section.section h2:hover::after {
 }
 
 .section h2 {
-    color: var(--blue-dark);
+    color: var(--purple-dark);
     margin-bottom: 2rem;
 }
 
@@ -596,7 +585,7 @@ section.section h2:hover::after {
 }
 
 .project-card h3 {
-    color: var(--blue-medium);
+    color: var(--purple-medium);
     margin-bottom: 1rem;
 }
 
@@ -609,7 +598,7 @@ section.section h2:hover::after {
 }
 
 .certification-card h3 {
-    color: var(--blue-dark);
+    color: var(--purple-dark);
     margin-bottom: 1rem;
 }
 
@@ -646,15 +635,7 @@ section.section h2:hover::after {
     padding: 2rem;
 }
 
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    margin-top: 60px;
-}
+/* Remove this duplicate hero style as it's inconsistent with the main one */
 
 .hero h1 {
     font-size: 3.5rem;
@@ -713,10 +694,39 @@ section.section h2:hover::after {
     padding: 4rem 0;
 }
 
+/* Footer styling */
 .footer {
     padding: 4rem 0;
-    background: var(--blue-dark);
-    color: white;
+    background: #212529 !important;
+    color: white !important;
+    display: block;
+}
+
+/* Ensure Font Awesome icons display properly in footer */
+.footer .fab, .footer .fas, .footer .fa, .footer .far {
+    display: inline-block !important;
+    font: normal normal normal 14px/1 FontAwesome !important;
+    font-size: inherit !important;
+    text-rendering: auto !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    background: transparent !important;
+    width: auto !important;
+    height: auto !important;
+    box-shadow: none !important;
+}
+
+/* Fix icon display on small screens */
+@media (max-width: 767px) {
+    .footer a.text-white {
+        display: inline-block;
+        margin: 0 10px 10px;
+    }
+    
+    .footer .social-links a {
+        display: inline-block;
+        margin: 0 10px 10px;
+    }
 }
 
 @media (max-width: 768px) {
