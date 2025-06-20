@@ -1,0 +1,292 @@
+/* Optimized CSS for Portfolio Website */
+
+:root {
+  /* Core colors */
+  --primary-color: #5e3577;
+  --secondary-color: #8e44ad;
+  --text-color: #333;
+  --light-bg: #f8f9fa;
+  --dark-bg: #2d2d2d;
+  
+  /* Purple palette */
+  --purple-dark: #5e3577;
+  --purple-medium: #8e44ad;
+  --purple-light: #d6b2ed;
+  --purple-lighter: #edd2f8;
+  --purple-accent: #9b59b6;
+  --purple-deep: #4a235a;
+  --purple-subtle: #f5eef8;
+  
+  /* UI state colors */
+  --success-color: #27ae60;
+  --warning-color: #f39c12;
+  --error-color: #e74c3c;
+  --white: #ffffff;
+  
+  /* Default variables for dark theme */
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  
+  /* Glass effect colors */
+  --glass-bg: 240 10% 10% / 0.7;
+  --glass-border: 0 0% 100% / 0.1;
+  --glass-highlight: 0 0% 100% / 0.1;
+  --glass-shadow: 0 0% 0% / 0.3;
+  
+  /* Cards */
+  --card: 240 10% 3.9% / 0.7;
+  --card-foreground: 0 0% 98%;
+  
+  /* Background gradient */
+  --bg-gradient: linear-gradient(135deg, hsl(260, 100%, 2%), hsl(290, 100%, 6%), hsl(230, 100%, 4%));
+  
+  /* Border */
+  --border: 240 5% 26%;
+  --input: 240 5% 26%;
+  --ring: 290, 50%, 60%;
+  --radius: 0.5rem;
+}
+
+/* Light theme variables */
+[data-theme="light"] {
+  --background: 0 0% 98%;
+  --foreground: 240 10% 3.9%;
+  --glass-bg: 0 0% 100% / 0.8;
+  --glass-border: 240 10% 3.9% / 0.1;
+  --glass-highlight: 240 10% 3.9% / 0.05;
+  --glass-shadow: 0 0% 0% / 0.1;
+  --card: 0 0% 100% / 0.8;
+  --card-foreground: 240 10% 3.9%;
+  --bg-gradient: linear-gradient(135deg, hsl(260, 50%, 92%), hsl(290, 50%, 95%), hsl(230, 50%, 90%));
+  --border: 240 5% 84%;
+  --input: 240 5% 84%;
+}
+
+/* Base styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: hsl(var(--foreground));
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.has-glassy-theme {
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.main-content {
+  min-height: calc(100vh - 60px);
+  padding-bottom: 60px;
+}
+
+/* Navigation */
+#main-navigation {
+  display: block !important;
+}
+
+.bg-glass {
+  background: hsla(var(--glass-bg)) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-bottom: 1px solid hsla(var(--glass-border)) !important;
+  box-shadow: 0 4px 12px hsla(var(--glass-shadow));
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Hide all Bootstrap navigation components */
+.navbar, .navbar-nav, .navbar-expand-lg, .navbar-dark, .navbar-brand, .navbar-toggler, .bg-dark,
+.nav, .nav-item, .nav-link, .dropdown-menu, .dropdown-item, .collapse, .navbar-collapse {
+  display: none !important;
+}
+
+/* Sections */
+section, .section {
+  padding: 5rem 0;
+}
+
+/* Hero section */
+.hero {
+  background: linear-gradient(135deg, var(--purple-medium) 0%, var(--purple-accent) 100%);
+  color: white;
+  padding: 8rem 0 4rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero img {
+  border: 5px solid white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  max-width: 100%;
+  height: auto;
+}
+
+/* Cards */
+.card, .project-card, .certification-card {
+  background: hsla(var(--card));
+  color: hsl(var(--card-foreground));
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px hsla(var(--glass-shadow));
+  border: 1px solid hsla(var(--glass-border));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.card:hover, .project-card:hover, .certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px hsla(var(--glass-shadow));
+}
+
+/* Grid layouts */
+.projects, .skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Footer */
+.footer {
+  background-color: hsla(var(--card)) !important;
+  color: hsl(var(--card-foreground)) !important;
+  padding: 3rem 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid hsla(var(--glass-border));
+}
+
+/* Theme toggle button */
+.theme-toggle-btn {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: hsla(var(--glass-bg));
+  border: 1px solid hsla(var(--glass-border));
+  color: hsl(var(--foreground));
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px hsla(var(--glass-shadow));
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px hsla(var(--glass-shadow));
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: hsla(var(--glass-bg));
+  color: hsl(var(--foreground));
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  box-shadow: 0 4px 12px hsla(var(--glass-shadow));
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.back-to-top.show {
+  display: flex;
+  opacity: 1;
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  section, .section {
+    padding: 3rem 0;
+  }
+  
+  .hero {
+    padding: 6rem 0 3rem;
+  }
+  
+  .theme-toggle-btn {
+    top: 20px;
+    right: 20px;
+  }
+  
+  .projects, .skills {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+/* Accessibility improvements */
+:focus {
+  outline: 3px solid hsla(var(--ring), 0.5);
+  outline-offset: 2px;
+}
+
+/* Fix font awesome icons */
+.footer .fab, .footer .fas, .footer .fa, .footer .far {
+  display: inline-block !important;
+  font: normal normal normal 14px/1 FontAwesome !important;
+  font-size: inherit !important;
+  text-rendering: auto !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}

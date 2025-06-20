@@ -1,0 +1,162 @@
+/* Theme styles with both dark and light modes */
+
+/* Default variables for dark theme */
+:root, [data-theme="dark"] {
+  /* Base colors */
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  
+  /* Glass effect colors */
+  --glass-bg: 240 10% 10% / 0.7;
+  --glass-border: 0 0% 100% / 0.1;
+  --glass-highlight: 0 0% 100% / 0.1;
+  --glass-shadow: 0 0% 0% / 0.3;
+  
+  /* Cards */
+  --card: 240 10% 3.9% / 0.7;
+  --card-foreground: 0 0% 98%;
+  
+  /* Primary (purple) */
+  --primary: 270 50% 35%;
+  --primary-foreground: 0 0% 98%;
+  
+  /* Secondary */
+  --secondary: 280 40% 50%;
+  --secondary-foreground: 0 0% 98%;
+  
+  /* Background gradient */
+  --bg-gradient: linear-gradient(135deg, hsl(260, 100%, 2%), hsl(290, 100%, 6%), hsl(230, 100%, 4%));
+  
+  /* Muted */
+  --muted: 240 5% 30%;
+  --muted-foreground: 240 5% 70%;
+  
+  /* Accent */
+  --accent: 290 50% 60%;
+  --accent-foreground: 0 0% 98%;
+  
+  /* Danger */
+  --destructive: 0 65% 50%;
+  --destructive-foreground: 210 20% 98%;
+  
+  /* Border */
+  --border: 240 5% 26%;
+  --input: 240 5% 26%;
+  --ring: 290, 50%, 60%;
+  
+  /* Radius */
+  --radius: 0.5rem;
+}
+
+/* Light theme variables */
+[data-theme="light"] {
+  /* Base colors */
+  --background: 0 0% 98%;
+  --foreground: 240 10% 3.9%;
+  
+  /* Glass effect colors */
+  --glass-bg: 0 0% 100% / 0.8;
+  --glass-border: 240 10% 3.9% / 0.1;
+  --glass-highlight: 240 10% 3.9% / 0.05;
+  --glass-shadow: 0 0% 0% / 0.1;
+  
+  /* Cards */
+  --card: 0 0% 100% / 0.8;
+  --card-foreground: 240 10% 3.9%;
+  
+  /* Primary (purple) */
+  --primary: 270 50% 35%;
+  --primary-foreground: 0 0% 98%;
+  
+  /* Secondary */
+  --secondary: 280 40% 50%;
+  --secondary-foreground: 0 0% 98%;
+  
+  /* Background gradient */
+  --bg-gradient: linear-gradient(135deg, hsl(260, 50%, 92%), hsl(290, 50%, 95%), hsl(230, 50%, 90%));
+  
+  /* Muted */
+  --muted: 240 5% 90%;
+  --muted-foreground: 240 5% 40%;
+  
+  /* Accent */
+  --accent: 290 70% 50%;
+  --accent-foreground: 0 0% 98%;
+  
+  /* Danger */
+  --destructive: 0 85% 60%;
+  --destructive-foreground: 210 20% 98%;
+  
+  /* Border */
+  --border: 240 5% 84%;
+  --input: 240 5% 84%;
+  --ring: 290, 70%, 50%;
+}
+
+/* Theme toggle button styling */
+.theme-toggle-btn {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: hsla(var(--glass-bg));
+  border: 1px solid hsla(var(--glass-border));
+  color: hsl(var(--foreground));
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px hsla(var(--glass-shadow));
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px hsla(var(--glass-shadow));
+}
+
+.theme-toggle-btn:active {
+  transform: translateY(1px);
+}
+
+/* Apply theme colors to base elements */
+body {
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: hsl(var(--foreground));
+}
+
+/* Improve glass effects for both themes */
+[data-theme="light"] .card,
+[data-theme="light"] nav.bg-gray-900,
+[data-theme="light"] footer.bg-gray-900 {
+  box-shadow: 0 8px 32px 0 hsla(var(--glass-shadow));
+  border: 1px solid hsla(var(--glass-border));
+}
+
+[data-theme="light"] nav.bg-gray-900,
+[data-theme="light"] footer.bg-gray-900 {
+  background-color: hsla(var(--glass-bg));
+  color: hsl(var(--foreground));
+}
+
+[data-theme="light"] .nav-link,
+[data-theme="light"] nav a,
+[data-theme="light"] footer a {
+  color: hsl(var(--foreground)) !important;
+}
+
+[data-theme="light"] .text-white {
+  color: hsl(var(--foreground)) !important;
+}
+
+/* Enhanced transitions for theme switching */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}

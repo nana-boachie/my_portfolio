@@ -1,0 +1,329 @@
+/* Enhanced Theme System with Dark, Light, and Solarized options */
+
+/* Dark Theme Variables - Default */
+:root, [data-theme="dark"] {
+  /* Base colors */
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  
+  /* Glass effect colors */
+  --glass-bg: 240 10% 10% / 0.7;
+  --glass-border: 0 0% 100% / 0.1;
+  --glass-highlight: 0 0% 100% / 0.1;
+  --glass-shadow: 0 0% 0% / 0.3;
+  
+  /* Cards */
+  --card: 240 10% 3.9% / 0.7;
+  --card-foreground: 0 0% 98%;
+  
+  /* Primary (purple) */
+  --primary: 270 50% 35%;
+  --primary-foreground: 0 0% 98%;
+  
+  /* Secondary */
+  --secondary: 280 40% 50%;
+  --secondary-foreground: 0 0% 98%;
+  
+  /* Background gradient */
+  --bg-gradient: linear-gradient(135deg, hsl(260, 100%, 2%), hsl(290, 100%, 6%), hsl(230, 100%, 4%));
+  
+  /* Muted */
+  --muted: 240 5% 30%;
+  --muted-foreground: 240 5% 70%;
+  
+  /* Accent */
+  --accent: 290 50% 60%;
+  --accent-foreground: 0 0% 98%;
+  
+  /* Danger */
+  --destructive: 0 65% 50%;
+  --destructive-foreground: 210 20% 98%;
+  
+  /* Border */
+  --border: 240 5% 26%;
+  --input: 240 5% 26%;
+  --ring: 290 50% 60%;
+  
+  /* Radius */
+  --radius: 0.5rem;
+  
+  /* Theme name */
+  --theme-name: 'Dark';
+  --theme-icon: '\f186'; /* moon icon */
+}
+
+/* Light Theme Variables */
+[data-theme="light"] {
+  /* Base colors */
+  --background: 0 0% 98%;
+  --foreground: 240 10% 3.9%;
+  
+  /* Glass effect colors */
+  --glass-bg: 0 0% 100% / 0.8;
+  --glass-border: 240 10% 3.9% / 0.1;
+  --glass-highlight: 240 10% 3.9% / 0.05;
+  --glass-shadow: 0 0% 0% / 0.1;
+  
+  /* Cards */
+  --card: 0 0% 100% / 0.8;
+  --card-foreground: 240 10% 3.9%;
+  
+  /* Primary (purple) */
+  --primary: 270 50% 35%;
+  --primary-foreground: 0 0% 98%;
+  
+  /* Secondary */
+  --secondary: 280 40% 50%;
+  --secondary-foreground: 0 0% 98%;
+  
+  /* Background gradient */
+  --bg-gradient: linear-gradient(135deg, hsl(260, 50%, 92%), hsl(290, 50%, 95%), hsl(230, 50%, 90%));
+  
+  /* Muted */
+  --muted: 240 5% 90%;
+  --muted-foreground: 240 5% 40%;
+  
+  /* Accent */
+  --accent: 290 70% 50%;
+  --accent-foreground: 0 0% 98%;
+  
+  /* Danger */
+  --destructive: 0 85% 60%;
+  --destructive-foreground: 210 20% 98%;
+  
+  /* Border */
+  --border: 240 5% 84%;
+  --input: 240 5% 84%;
+  --ring: 290 70% 50%;
+  
+  /* Theme name */
+  --theme-name: 'Light';
+  --theme-icon: '\f185'; /* sun icon */
+}
+
+/* Solarized Theme Variables (New) */
+[data-theme="solarized"] {
+  /* Base colors - Solarized color scheme */
+  --background: 44 87% 94%;
+  --foreground: 194 14% 40%;
+  
+  /* Glass effect colors - solarized adaptations */
+  --glass-bg: 44 87% 96% / 0.8;
+  --glass-border: 194 14% 40% / 0.1;
+  --glass-highlight: 194 14% 40% / 0.05;
+  --glass-shadow: 194 14% 40% / 0.1;
+  
+  /* Cards */
+  --card: 44 87% 96% / 0.8;
+  --card-foreground: 196 13% 45%;
+  
+  /* Primary (solarized blue) */
+  --primary: 205 82% 33%;
+  --primary-foreground: 44 87% 94%;
+  
+  /* Secondary (solarized cyan) */
+  --secondary: 175 74% 39%;
+  --secondary-foreground: 44 87% 94%;
+  
+  /* Background gradient */
+  --bg-gradient: linear-gradient(135deg, hsl(44, 87%, 96%), hsl(44, 87%, 94%), hsl(44, 87%, 92%));
+  
+  /* Muted */
+  --muted: 46 42% 88%;
+  --muted-foreground: 195 14% 30%;
+  
+  /* Accent (solarized orange) */
+  --accent: 18 80% 44%;
+  --accent-foreground: 44 87% 94%;
+  
+  /* Danger (solarized red) */
+  --destructive: 1 71% 52%;
+  --destructive-foreground: 44 87% 94%;
+  
+  /* Border */
+  --border: 44 30% 70%;
+  --input: 44 30% 70%;
+  --ring: 205 82% 33%;
+  
+  /* Theme name */
+  --theme-name: 'Solarized';
+  --theme-icon: '\f5aa'; /* palette icon */
+}
+
+/* Enhanced Theme Toggle Button */
+.theme-toggle-btn {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: hsla(var(--glass-bg));
+  border: 1px solid hsla(var(--glass-border));
+  color: hsl(var(--foreground));
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px hsla(var(--glass-shadow));
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px hsla(var(--glass-shadow));
+}
+
+.theme-toggle-btn:active {
+  transform: translateY(1px);
+}
+
+/* Theme Menu (for selecting between multiple themes) */
+.theme-menu {
+  position: fixed;
+  top: 120px;
+  right: 20px;
+  z-index: 999;
+  background: hsla(var(--glass-bg));
+  border: 1px solid hsla(var(--glass-border));
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px hsla(var(--glass-shadow));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.5rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.theme-menu.show {
+  display: flex;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.theme-option {
+  padding: 0.5rem 1rem;
+  border-radius: calc(var(--radius) - 2px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.theme-option:hover {
+  background: hsla(var(--glass-highlight));
+}
+
+.theme-option.active {
+  background: hsla(var(--accent), 0.2);
+  font-weight: bold;
+}
+
+.theme-icon {
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+
+/* Apply theme colors to base elements */
+body {
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: hsl(var(--foreground));
+}
+
+/* Glass effects for all themes */
+.card, 
+.project-card, 
+.certification-card,
+nav.bg-glass, 
+footer.bg-glass {
+  box-shadow: 0 8px 32px 0 hsla(var(--glass-shadow));
+  border: 1px solid hsla(var(--glass-border));
+  background-color: hsla(var(--glass-bg));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: hsl(var(--foreground));
+}
+
+/* Links in navigation */
+nav a,
+footer a,
+.nav-link {
+  color: hsl(var(--foreground)) !important;
+}
+
+/* Text colors */
+.text-white {
+  color: hsl(var(--foreground)) !important;
+}
+
+/* Button styling for themes */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: hsl(var(--primary)) !important;
+  border-color: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+}
+
+.btn-secondary {
+  background-color: hsl(var(--secondary)) !important;
+  border-color: hsl(var(--secondary)) !important;
+  color: hsl(var(--secondary-foreground)) !important;
+}
+
+.btn-outline-light {
+  border-color: hsl(var(--foreground)) !important;
+  color: hsl(var(--foreground)) !important;
+}
+
+.btn-outline-light:hover {
+  background-color: hsla(var(--foreground), 0.1) !important;
+}
+
+/* Hero section adaptations */
+.hero {
+  background: linear-gradient(135deg, 
+               hsla(var(--primary)), 
+               hsla(var(--accent)));
+  color: hsl(var(--primary-foreground));
+}
+
+/* Enhanced transitions for theme switching */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Theme-specific adjustments */
+[data-theme="solarized"] .card {
+  border-width: 2px;
+}
+
+[data-theme="solarized"] .hero {
+  background: linear-gradient(135deg, 
+               hsl(205, 82%, 33%),
+               hsl(18, 80%, 44%));
+}
+
+[data-theme="solarized"] a:hover {
+  color: hsl(18, 80%, 44%) !important;
+}
+
+/* Improved focus indicators for accessibility */
+:focus {
+  outline: 3px solid hsla(var(--ring), 0.5);
+  outline-offset: 2px;
+}

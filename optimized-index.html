@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ING. Nana Kwame Yiadom Boachie's Portfolio - Showcasing skills, projects, and professional experience in technology and development.">
+    <meta name="keywords" content="portfolio, developer, technology, Nana Kwame Yiadom Boachie, projects">
+    <meta name="author" content="ING. Nana Kwame Yiadom Boachie">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="ING. Nana Kwame Yiadom Boachie - Portfolio">
+    <meta property="og:description" content="Professional portfolio showcasing my skills, projects, and experience.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:image" content="https://yourdomain.com/img/portfolio-preview.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <title>ING. Nana Kwame Yiadom Boachie - Portfolio</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="optimized-styles.css" as="style">
+    <link rel="preload" href="optimized-scripts.js" as="script">
+    
+    <!-- Font Awesome with reduced subset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Tailwind CSS (with modern loading strategy) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    
+    <!-- Optimized consolidated CSS -->
+    <link rel="stylesheet" href="optimized-styles.css">
+    
+    <!-- Enhanced Theme System CSS -->
+    <link rel="stylesheet" href="enhanced-themes.css">
+    
+    <!-- Initialize theme before page load to prevent flash -->
+    <script>
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
+    </script>
+</head>
+<body class="has-glassy-theme">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:p-4 focus:bg-white focus:text-black focus:z-50">Skip to main content</a>
+    
+    <main id="main-content" class="main-content">
+        <!-- Navigation with Tailwind CSS and Glassy UI -->
+        <nav id="main-navigation" class="bg-glass text-white sticky top-0 z-50" aria-label="Main Navigation">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between py-4">
+                    <a href="index.html" class="text-xl font-bold" aria-label="Yiadom - Homepage">Yiadom</a>
+                    
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-white focus:outline-none" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Desktop menu -->
+                    <div class="hidden md:flex md:items-center md:space-x-6">
+                        <a href="index.html" class="text-white hover:text-gray-300" aria-current="page">Home</a>
+                        <a href="pages/sections/about.html" class="text-white hover:text-gray-300">About</a>
+                        <a href="pages/sections/projects.html" class="text-white hover:text-gray-300">Projects</a>
+                        <a href="pages/sections/skills.html" class="text-white hover:text-gray-300">Skills</a>
+                        <a href="pages/sections/certifications.html" class="text-white hover:text-gray-300">Certifications</a>
+                        <a href="pages/blog.html" class="text-white hover:text-gray-300">Blog</a>
+                        <a href="pages/sections/contact.html" class="text-white hover:text-gray-300">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu (hidden by default) -->
+                <div id="mobile-menu" class="hidden pb-4 md:hidden" role="menu" aria-labelledby="mobile-menu-button">
+                    <div class="flex flex-col space-y-3">
+                        <a href="index.html" class="text-white hover:text-gray-300" aria-current="page" role="menuitem">Home</a>
+                        <a href="pages/sections/about.html" class="text-white hover:text-gray-300" role="menuitem">About</a>
+                        <a href="pages/sections/projects.html" class="text-white hover:text-gray-300" role="menuitem">Projects</a>
+                        <a href="pages/sections/skills.html" class="text-white hover:text-gray-300" role="menuitem">Skills</a>
+                        <a href="pages/sections/certifications.html" class="text-white hover:text-gray-300" role="menuitem">Certifications</a>
+                        <a href="pages/blog.html" class="text-white hover:text-gray-300" role="menuitem">Blog</a>
+                        <a href="pages/sections/contact.html" class="text-white hover:text-gray-300" role="menuitem">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero" role="banner">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h1 class="text-4xl md:text-5xl font-bold mb-4">Nana Kwame Yiadom Boachie</h1>
+                        <p class="text-lg md:text-xl mb-6">Technology Professional & Developer</p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#projects" class="px-6 py-3 bg-purple-700 hover:bg-purple-800 text-white rounded-lg transition-all">View Projects</a>
+                            <a href="pages/blog.html" class="px-6 py-3 border border-white hover:bg-white hover:text-purple-700 text-white rounded-lg transition-all">View My Blog</a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <img src="img/profile.jpg" alt="Nana Kwame Yiadom Boachie" class="w-64 h-64 rounded-full object-cover shadow-lg" loading="eager" width="256" height="256">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- About Section (Abbreviated) -->
+        <section id="about" class="section bg-glass" aria-labelledby="about-heading">
+            <div class="container mx-auto px-4">
+                <h2 id="about-heading" class="text-3xl font-bold mb-8 text-center">About Me</h2>
+                <div class="card max-w-3xl mx-auto p-6">
+                    <p class="mb-4">Hello! I'm a passionate technology professional with expertise in web development, IT support, and digital solutions. I enjoy creating modern, responsive web applications with beautiful UI.</p>
+                    <a href="pages/sections/about.html" class="inline-block px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded transition-all">Learn More About Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section id="projects" class="section" aria-labelledby="projects-heading">
+            <div class="container mx-auto px-4">
+                <h2 id="projects-heading" class="text-3xl font-bold mb-8 text-center">Featured Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project cards would go here -->
+                    <article class="project-card">
+                        <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
+                        <p class="mb-4">A responsive personal portfolio built with HTML, CSS, and JavaScript.</p>
+                        <a href="#" class="inline-block px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded transition-all">View Project</a>
+                    </article>
+                </div>
+                <div class="mt-8 text-center">
+                    <a href="pages/sections/projects.html" class="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-all">View All Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="py-12 bg-glass">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to collaborate?</h2>
+                <p class="mb-6 max-w-2xl mx-auto">Let's work together on your next project. I'm available for freelance work and full-time opportunities.</p>
+                <a href="pages/sections/contact.html" class="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-all">Contact Me</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer" role="contentinfo">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-6 md:mb-0">
+                        <h2 class="text-xl font-bold mb-2">ING. Nana Kwame Yiadom Boachie</h2>
+                        <p>&copy; 2025 All rights reserved</p>
+                    </div>
+                    <div class="social-links flex gap-4">
+                        <a href="https://linkedin.com/" aria-label="LinkedIn" class="text-white hover:text-purple-300"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="https://github.com/" aria-label="GitHub" class="text-white hover:text-purple-300"><i class="fab fa-github fa-lg"></i></a>
+                        <a href="https://twitter.com/" aria-label="Twitter" class="text-white hover:text-purple-300"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="mailto:contact@example.com" aria-label="Email" class="text-white hover:text-purple-300"><i class="fas fa-envelope fa-lg"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Add site map for SEO and accessibility -->
+                <div class="mt-8 pt-6 border-t border-gray-700">
+                    <ul class="flex flex-wrap justify-center gap-6">
+                        <li><a href="index.html" class="text-white hover:text-purple-300">Home</a></li>
+                        <li><a href="pages/sections/about.html" class="text-white hover:text-purple-300">About</a></li>
+                        <li><a href="pages/sections/projects.html" class="text-white hover:text-purple-300">Projects</a></li>
+                        <li><a href="pages/sections/skills.html" class="text-white hover:text-purple-300">Skills</a></li>
+                        <li><a href="pages/sections/certifications.html" class="text-white hover:text-purple-300">Certifications</a></li>
+                        <li><a href="pages/blog.html" class="text-white hover:text-purple-300">Blog</a></li>
+                        <li><a href="pages/sections/contact.html" class="text-white hover:text-purple-300">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </main>
+    
+    <!-- Optimized consolidated JS (deferred for better page load) -->
+    <script src="optimized-scripts.js" defer></script>
+    
+    <!-- Enhanced Theme Switcher with multiple themes -->
+    <script src="enhanced-theme-switcher.js" defer></script>
+    
+    <!-- Service Worker Registration for offline capability -->
+    <script src="sw-register.js" defer></script>
+    
+    <!-- Only include Bootstrap JS at the end of the body to avoid conflicts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "ING. Nana Kwame Yiadom Boachie",
+        "url": "https://yourdomain.com",
+        "sameAs": [
+            "https://linkedin.com/in/your-linkedin",
+            "https://github.com/your-github",
+            "https://twitter.com/your-twitter"
+        ],
+        "jobTitle": "Technology Professional",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Your Company or Freelance"
+        }
+    }
+    </script>
+</body>
+</html>

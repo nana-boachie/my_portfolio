@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="ING. Nana Kwame Yiadom Boachie">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="How to Repair a Drive Using Diskpart - IT Expert Blog">
-    <title>Drive Repair with Diskpart | Yiadom's Blog</title>
+    <title>Drive Repair with Diskpart | ING. Nana Kwame Yiadom Boachie</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome for icons -->
@@ -15,6 +16,44 @@
     <link rel="stylesheet" href="../../purple-theme.css">
     <!-- shadcn Theme CSS -->
     <link rel="stylesheet" href="../../shadcn-theme.css">
+    <!-- Theme styles for glassy UI -->
+    <link rel="stylesheet" href="../../theme-styles.css">
+    <!-- Enhanced Theme System CSS -->
+    <link rel="stylesheet" href="../../enhanced-themes.css">
+    <script>
+        // Prepare the HTML element for theming - ensure this runs early
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
+    </script>
+    
+    <!-- Fix for navbar duplication and glassy theme enhancements -->
+    <style>
+        /* Complete reset for Bootstrap navigation components */
+        .navbar, .navbar-nav, .navbar-expand-lg, .navbar-dark, .navbar-brand, .navbar-toggler, .bg-dark,
+        .nav, .nav-item, .nav-link, .dropdown-menu, .dropdown-item, .collapse, .navbar-collapse {
+            display: none !important; /* Hide ALL Bootstrap navigation components */
+        }
+        
+        /* Reset styles that might be causing layout issues */
+        body, html {
+            overflow-x: hidden;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Make sure only one navigation is visible */
+        #main-navigation {
+            display: block !important;
+        }
+        
+        /* Glass style for navigation */
+        .bg-glass {
+            background: var(--glass-bg) !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+            border-bottom: 1px solid var(--glass-border) !important;
+        }
+    </style>
     <style>
         .blog-header {
             background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple-medium) 100%);
@@ -66,9 +105,50 @@
         }
     </style>
 </head>
-<body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+<body class="has-glassy-theme">
     <main class="main-content">
+        <!-- Navigation with Tailwind CSS and Glassy UI -->
+        <nav id="main-navigation" class="bg-glass text-white sticky top-0 z-50">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between py-4">
+                    <a href="../../index.html" class="text-xl font-bold">Yiadom</a>
+                    
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-white focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Desktop menu -->
+                    <div class="hidden md:flex md:items-center md:space-x-6">
+                        <a href="../../index.html" class="text-white hover:text-gray-300">Home</a>
+                        <a href="../../pages/sections/about.html" class="text-white hover:text-gray-300">About</a>
+                        <a href="../../pages/sections/projects.html" class="text-white hover:text-gray-300">Projects</a>
+                        <a href="../../pages/sections/skills.html" class="text-white hover:text-gray-300">Skills</a>
+                        <a href="../../pages/sections/certifications.html" class="text-white hover:text-gray-300">Certifications</a>
+                        <a href="../../pages/blog.html" class="text-white hover:text-gray-300 font-medium">Blog</a>
+                        <a href="../../pages/sections/contact.html" class="text-white hover:text-gray-300">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu (hidden by default) -->
+                <div id="mobile-menu" class="hidden pb-4 md:hidden">
+                    <div class="flex flex-col space-y-3">
+                        <a href="../../index.html" class="text-white hover:text-gray-300">Home</a>
+                        <a href="../../pages/sections/about.html" class="text-white hover:text-gray-300">About</a>
+                        <a href="../../pages/sections/projects.html" class="text-white hover:text-gray-300">Projects</a>
+                        <a href="../../pages/sections/skills.html" class="text-white hover:text-gray-300">Skills</a>
+                        <a href="../../pages/sections/certifications.html" class="text-white hover:text-gray-300">Certifications</a>
+                        <a href="../../pages/blog.html" class="text-white hover:text-gray-300 font-medium">Blog</a>
+                        <a href="../../pages/sections/contact.html" class="text-white hover:text-gray-300">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
         <header class="blog-header">
             <div class="container">
                 <div class="d-flex align-items-center mb-4">
@@ -229,7 +309,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>&copy; 2025 Nana Kwame Yiadom Boachie. All rights reserved.</p>
+                        <p class="text-sm text-gray-500">By ING. Nana Kwame Yiadom Boachie | Published on May 17, 2025. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 text-md-end">
                         <a href="../../pages/blog.html" class="text-white">Back to Blog</a>
@@ -241,5 +321,14 @@
     </main>
     
     <script src="../../script.js"></script>
+    <!-- Common UI components script -->
+    <script src="../../ui-components.js"></script>
+    <!-- Theme Toggle Script -->
+    <script src="../../theme-switcher.js"></script>
+    <!-- Enhanced Theme Switcher with multiple themes -->
+    <script src="../../enhanced-theme-switcher.js" defer></script>
+    
+    <!-- Bootstrap JS at the end to avoid conflicts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
