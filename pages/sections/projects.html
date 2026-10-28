@@ -3,200 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yiadom - Professional Experience and Projects">
-    <title>Projects | Nana Kwame Yiadom Boachie</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../../styles.css">
-    <!-- Purple Theme CSS -->
-    <link rel="stylesheet" href="../../purple-theme.css">
-    <!-- shadcn Theme CSS -->
-    <link rel="stylesheet" href="../../shadcn-theme.css">
-    <!-- Theme Styles (Light/Dark) -->
-    <link rel="stylesheet" href="../../theme-styles.css">
-
+    <title>Work | Nana Kwame Yiadom Boachie</title>
+    <meta name="description" content="Client websites, engineering software and power systems experience.">
+    <meta property="og:title" content="Work | Nana Kwame Yiadom Boachie">
+    <meta property="og:description" content="Client websites, engineering software and power systems experience.">
+    <meta property="og:image" content="https://nana-boachie.github.io/my_portfolio/assets/img/profile.jpg">
+    <meta name="theme-color" content="#0b1220">
+    <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}var r=document.documentElement;r.setAttribute('data-theme',t);r.classList.add('js')})();</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/site.css">
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-    <main class="main-content">
-        <!-- Navigation with Tailwind CSS -->
-        <nav class="bg-gray-900 text-white sticky top-0 z-50">
-            <div class="container mx-auto px-4">
-                <div class="flex items-center justify-between py-4">
-                    <a href="../../index.html" class="text-xl font-bold">Yiadom</a>
-                    
-                    <!-- Mobile menu button -->
-                    <div class="md:hidden">
-                        <button id="mobile-menu-button" class="text-white focus:outline-none">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    
-                    <!-- Desktop menu -->
-                    <div class="hidden md:flex md:items-center md:space-x-6">
-                        <a href="../../index.html" class="text-white hover:text-gray-300">Home</a>
-                        <a href="about.html" class="text-white hover:text-gray-300">About</a>
-                        <a href="projects.html" class="text-white hover:text-gray-300 font-medium">Projects</a>
-                        <a href="skills.html" class="text-white hover:text-gray-300">Skills</a>
-                        <a href="certifications.html" class="text-white hover:text-gray-300">Certifications</a>
-                        <a href="../blog.html" class="text-white hover:text-gray-300">Blog</a>
-                        <a href="contact.html" class="text-white hover:text-gray-300">Contact</a>
-                    </div>
-                </div>
-                
-                <!-- Mobile menu (hidden by default) -->
-                <div id="mobile-menu" class="hidden pb-4 md:hidden">
-                    <div class="flex flex-col space-y-3">
-                        <a href="../../index.html" class="text-white hover:text-gray-300">Home</a>
-                        <a href="about.html" class="text-white hover:text-gray-300">About</a>
-                        <a href="projects.html" class="text-white hover:text-gray-300 font-medium">Projects</a>
-                        <a href="skills.html" class="text-white hover:text-gray-300">Skills</a>
-                        <a href="certifications.html" class="text-white hover:text-gray-300">Certifications</a>
-                        <a href="../blog.html" class="text-white hover:text-gray-300">Blog</a>
-                        <a href="contact.html" class="text-white hover:text-gray-300">Contact</a>
-                    </div>
-                </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../../index.html" aria-label="Yiadom, home">
+                <span class="brand-mark">NY</span>
+                <span>Yiadom</span>
+            </a>
+            <nav class="nav" aria-label="Main">
+                <a href="../../index.html">Home</a>
+                <a href="../../pages/sections/services.html">Services</a>
+                <a href="../../pages/sections/projects.html" aria-current="page">Work</a>
+                <a href="../../pages/sections/about.html">About</a>
+                <a href="../../pages/blog.html">Blog</a>
+                <a href="../../pages/sections/contact.html">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-btn theme-toggle" type="button" aria-label="Switch light or dark theme">
+                    <i class="fas fa-moon" aria-hidden="true"></i><i class="fas fa-sun" aria-hidden="true"></i>
+                </button>
+                <a class="btn btn-primary btn-sm" href="../../pages/sections/services.html">Hire me</a>
+                <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
             </div>
-        </nav>
+        </div>
+    </header>
 
-        <!-- Projects Section -->
-        <section class="section py-5">
+    <main id="main">
+        <section class="page-hero">
             <div class="container">
-                <!-- Page Header -->
-                <header class="page-header text-center mb-5">
-                    <h1 class="display-4 fw-bold">Professional Experience</h1>
-                    <div class="divider mx-auto"></div>
-                    <p class="lead text-muted">Key projects and professional accomplishments</p>
-                </header>
-                
-                <div class="row justify-content-center">
-                    <div class="col-lg-10">
-                        <!-- Project 1 -->
-                        <div class="card mb-4 shadow-sm">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-3 mb-3 mb-md-0">
-                                        <div class="bg-primary text-white rounded h-100 d-flex align-items-center justify-content-center p-3">
-                                            <i class="fas fa-broadcast-tower fa-3x"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-9 rounded">
-                                        <h3 class="card-title">PMU/PDC Installation & Configuration</h3>
-                                        <p class="card-text">Successfully joined the installation and configuration of PMU (Phasor Measurement Unit) and PDC (Phasor Data Concentrator) systems across 10 GRIDCo substations. Implemented real-time monitoring and data collection systems for enhanced grid stability and reliability.</p>
-                                        <div class="tech-stack">
-                                            <span class="badge bg-primary">PMU Systems</span>
-                                            <span class="badge bg-primary">PDC Configuration</span>
-                                            <span class="badge bg-primary">Substation Automation</span>
-                                            <span class="badge bg-primary">Grid Monitoring</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Project 2 -->
-                        <div class="card mb-4 shadow-sm">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-3 mb-3 mb-md-0">
-                                        <div class="bg-success text-white rounded h-100 d-flex align-items-center justify-content-center p-3">
-                                            <i class="fas fa-shield-alt fa-3x"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-9 rounded">
-                                        <h3 class="card-title">Power Systems Protection</h3>
-                                        <p class="card-text">Led protection system upgrades for critical transmission infrastructure. Designed and implemented new protection schemes that reduced outage response time by 30% and improved system reliability.</p>
-                                        <div class="tech-stack">
-                                            <span class="badge bg-primary">Relay Protection</span>
-                                            <span class="badge bg-primary">System Reliability</span>
-                                            <span class="badge bg-primary">Circuit Analysis</span>
-                                            <span class="badge bg-primary">Fault Detection</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Project 3 -->
-                        <div class="card mb-4 shadow-sm">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-3 mb-3 mb-md-0">
-                                        <div class="bg-warning text-white rounded h-100 d-flex align-items-center justify-content-center p-3">
-                                            <i class="fas fa-network-wired fa-3x"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-9 rounded">
-                                        <h3 class="card-title">Network Infrastructure Optimization</h3>
-                                        <p class="card-text">Redesigned and optimized the corporate IT network infrastructure, resulting in improved data throughput and reduced latency across all operational sites.</p>
-                                        <div class="tech-stack">
-                                            <span class="badge bg-primary">Network Design</span>
-                                            <span class="badge bg-primary">Infrastructure</span>
-                                            <span class="badge bg-primary">System Integration</span>
-                                            <span class="badge bg-primary">Performance Optimization</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <span class="eyebrow">Work</span>
+                <h1>Projects &amp; experience</h1>
+                <p class="lead">Websites for clients, software for engineers, and hands-on work on Ghana's transmission grid.</p>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Featured</span>
+                    <h2>Featured projects</h2>
+                </div>
+                <article class="work reveal">
+                    <div class="work-media">
+                        <img src="../../assets/img/deyands.jpg" alt="DEYANDS website home page" loading="lazy" width="800" height="506">
+                    </div>
+                    <div class="work-body">
+                        <span class="eyebrow">Client website</span>
+                        <h3>DEYANDS</h3>
+                        <p class="muted">Website for a Ghanaian family business offering G-Water bottled water, counseling, beauty, IT consulting and document services.</p>
+                        <ul class="check-list">
+                            <li>Home, about, contact and five service pages</li>
+                            <li>One-tap call and email, light and dark mode</li>
+                            <li>Automated tests, hosted on Vercel</li>
+                        </ul>
+                        <ul class="tags"><li class="tag">Python</li><li class="tag">Flask</li><li class="tag">Jinja</li><li class="tag">Vercel</li></ul>
+                        <a class="btn btn-secondary btn-sm" href="https://deyands-app.vercel.app" target="_blank" rel="noopener">Visit live site <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </article>
+
+                <article class="work reveal">
+                    <div class="work-media">
+                        <img src="../../assets/img/power-system-calculator.jpg" alt="Power System Calculator showing fault and protection study results" loading="lazy" width="1265" height="997">
+                    </div>
+                    <div class="work-body">
+                        <span class="eyebrow">Engineering software</span>
+                        <h3>Power System Calculator</h3>
+                        <p class="muted">A browser-based engineering calculator for power, fault, protection and coordination studies, with live results and graphical relay characteristics.</p>
+                        <ul class="check-list">
+                            <li>Runs entirely in the browser, no install</li>
+                            <li>Exact sample tables and graphical characteristics</li>
+                            <li>Opens legacy <code>.psc</code> study files</li>
+                        </ul>
+                        <ul class="tags"><li class="tag">TypeScript</li><li class="tag">Protection studies</li><li class="tag">Fault analysis</li></ul>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Open source</span>
+                    <h2>More on GitHub</h2>
+                </div>
+                <div class="grid grid-3">
+                    <article class="card card-hover reveal">
+                        <div class="card-icon"><i class="fas fa-table"></i></div>
+                        <h3>Telemetry Analysis Suite</h3>
+                        <p class="muted">Cross-platform tool that groups, sums and organises telemetry data across Excel sheets by name prefix and timestamp.</p>
+                        <ul class="tags"><li class="tag">Python</li><li class="tag">Excel</li></ul>
+                        <p style="margin-top:18px"><a class="text-link" href="https://github.com/nana-boachie/telemetary-summation" target="_blank" rel="noopener">View code <i class="fas fa-arrow-right"></i></a></p>
+                    </article>
+                    <article class="card card-hover reveal">
+                        <div class="card-icon"><i class="fas fa-calculator"></i></div>
+                        <h3>Overcurrent Calculator</h3>
+                        <p class="muted">Command-line calculator for overcurrent protection relay settings, written in C.</p>
+                        <ul class="tags"><li class="tag">C</li><li class="tag">Protection</li></ul>
+                        <p style="margin-top:18px"><a class="text-link" href="https://github.com/nana-boachie/overcurrent_calculator" target="_blank" rel="noopener">View code <i class="fas fa-arrow-right"></i></a></p>
+                    </article>
+                    <article class="card card-hover reveal">
+                        <div class="card-icon"><i class="fas fa-microchip"></i></div>
+                        <h3>Yiadom OS</h3>
+                        <p class="muted">A small 32-bit x86 operating system built from scratch in C and assembly, as a deep dive into how computers boot.</p>
+                        <ul class="tags"><li class="tag">C</li><li class="tag">Assembly</li><li class="tag">Zig</li></ul>
+                        <p style="margin-top:18px"><a class="text-link" href="https://github.com/nana-boachie/yiadom_os" target="_blank" rel="noopener">View code <i class="fas fa-arrow-right"></i></a></p>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Experience</span>
+                    <h2>Professional experience</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <span class="eyebrow">GRIDCo &middot; Substations</span>
+                        <h3>PMU/PDC installation &amp; configuration</h3>
+                        <p>Took part in installing and configuring Phasor Measurement Units and Phasor Data Concentrators across 10 GRIDCo substations, adding real-time monitoring and data collection for grid stability.</p>
+                        <ul class="tags"><li class="tag">PMU</li><li class="tag">PDC</li><li class="tag">Substation automation</li></ul>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <span class="eyebrow">GRIDCo &middot; Transmission</span>
+                        <h3>Power systems protection upgrades</h3>
+                        <p>Led protection system upgrades for critical transmission infrastructure, designing new schemes that cut outage response time by 30%.</p>
+                        <ul class="tags"><li class="tag">Relay protection</li><li class="tag">Fault detection</li><li class="tag">Reliability</li></ul>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <span class="eyebrow">IT infrastructure</span>
+                        <h3>Network infrastructure optimisation</h3>
+                        <p>Redesigned the corporate network across operational sites, improving data throughput and reducing latency.</p>
+                        <ul class="tags"><li class="tag">Network design</li><li class="tag">System integration</li></ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="cta reveal">
+                    <div>
+                        <h2>Have a project in mind?</h2>
+                        <p>Tell me about your business or the tool your team needs. I usually reply the same day.</p>
+                    </div>
+                    <div class="btn-row">
+                        <a class="btn btn-whatsapp btn-lg" href="https://wa.me/233559808201?text=Hello%20Yiadom%2C%20I%20would%20like%20a%20website%20for%20my%20business." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                        <a class="btn btn-secondary btn-lg" href="../../pages/sections/contact.html">Send an email</a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Back to top button -->
-        <button class="fixed bottom-6 right-6 bg-purple-600 text-white rounded-full p-3 shadow-lg hover:bg-purple-700 focus:outline-none z-50" id="back-to-top">
-            <i class="fas fa-arrow-up"></i>
-        </button>
     </main>
-    
-    <!-- Footer with Tailwind CSS --> 
-    <footer class="bg-gray-900 text-white py-8" id="site-footer">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center md:justify-between">
-                <div class="w-full md:w-1/3 text-center md:text-left mb-4 md:mb-0">
-                    <p>&copy; 2025 Nana Kwame Yiadom Boachie. All rights reserved.</p>
-                </div>
-                
-                <div class="w-full md:w-1/3 text-center mb-4 md:mb-0">
-                    <div class="flex justify-center space-x-4">
-                        <a href="https://x.com/theloved_1" target="_blank" class="text-white hover:text-gray-300">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="https://facebook.com/NanaKwameYiadomBoachie" target="_blank" class="text-white hover:text-gray-300">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
-                        <a href="https://github.com/nana-boachie" target="_blank" class="text-white hover:text-gray-300">
-                            <i class="fab fa-github text-xl"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/NanaKwameYiadomBoachie" target="_blank" class="text-white hover:text-gray-300">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="w-full md:w-1/3 text-center md:text-right">
-                    <div class="flex justify-center md:justify-end space-x-4">
-                        <a href="../../index.html" class="text-white hover:text-gray-300">Home</a>
-                        <a href="about.html" class="text-white hover:text-gray-300">About</a>
-                        <a href="contact.html" class="text-white hover:text-gray-300">Contact</a>
-                    </div>
-                </div>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a class="brand" href="../../index.html">
+                <span class="brand-mark">NY</span>
+                <span>Nana Kwame Yiadom Boachie</span>
+            </a>
+            <nav class="footer-links" aria-label="Footer">
+                <a href="../../pages/sections/services.html">Services</a>
+                <a href="../../pages/sections/projects.html">Work</a>
+                <a href="../../pages/sections/skills.html">Skills</a>
+                <a href="../../pages/sections/certifications.html">Certifications</a>
+                <a href="../../pages/blog.html">Blog</a>
+                <a href="../../pages/sections/contact.html">Contact</a>
+            </nav>
+            <div class="socials">
+                <a href="https://github.com/nana-boachie" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/NanaKwameYiadomBoachie" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/theloved_1" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://facebook.com/NanaKwameYiadomBoachie" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             </div>
+            <p class="copyright">&copy; <span data-year>2026</span> Nana Kwame Yiadom Boachie &middot; Accra, Ghana</p>
         </div>
     </footer>
-    
-    <script src="../../script.js"></script>
-    <!-- Common UI components script -->
-    <script src="../../ui-components.js"></script>
-    <!-- Theme Toggle Script -->
-    <script src="../../theme-switcher.js"></script>
+
+    <script src="../../assets/js/site.js"></script>
 </body>
 </html>

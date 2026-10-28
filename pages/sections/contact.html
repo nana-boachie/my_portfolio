@@ -1,351 +1,127 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact ING. Nana Kwame Yiadom Boachie - Get in touch for IT support, web development, or electrical engineering inquiries">
-    <title>Contact Me | ING. Nana Kwame Yiadom Boachie</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Bootstrap CSS (minimal) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../../styles.css">
-    <!-- Purple Theme CSS -->
-    <link rel="stylesheet" href="../../purple-theme.css">
-    <!-- shadcn Theme CSS -->
-    <link rel="stylesheet" href="../../shadcn-theme.css">
-    <!-- Theme styles for glassy UI -->
-    <link rel="stylesheet" href="../../theme-styles.css">
-    <!-- Enhanced Theme System CSS -->
-    <link rel="stylesheet" href="../../enhanced-themes.css">
-    <script>
-        // Prepare the HTML element for theming - ensure this runs early
-        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
-    </script>
-    
-    <!-- Fix for navbar duplication and glassy theme enhancements -->
-    <style>
-        /* Complete reset for Bootstrap navigation components */
-        .navbar, .navbar-nav, .navbar-expand-lg, .navbar-dark, .navbar-brand, .navbar-toggler, .bg-dark,
-        .nav, .nav-item, .nav-link, .dropdown-menu, .dropdown-item, .collapse, .navbar-collapse {
-            display: none !important; /* Hide ALL Bootstrap navigation components */
-        }
-        
-        /* Reset styles that might be causing layout issues */
-        body, html {
-            overflow-x: hidden;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        
-        /* Ensure the navbar has the correct z-index and glassy styling */
-        nav.bg-glass {
-            z-index: 1030 !important;
-            position: sticky !important;
-            top: 0 !important;
-            width: 100% !important;
-            background: var(--glass-bg) !important;
-            backdrop-filter: blur(10px) !important;
-            -webkit-backdrop-filter: blur(10px) !important;
-            border-bottom: 1px solid var(--glass-border) !important;
-        }
-        
-        /* Style improvements for glass cards */
-        .card.bg-glass {
-            background: var(--glass-bg) !important;
-            backdrop-filter: blur(8px) !important;
-            -webkit-backdrop-filter: blur(8px) !important;
-            border: 1px solid var(--glass-border) !important;
-        }
-        
-        .card.bg-glass .card-header {
-            background: var(--glass-header-bg) !important;
-            border-bottom: 1px solid var(--glass-border) !important;
-        }
-        
-        .card.bg-glass .card-body {
-            background: transparent !important;
-            color: var(--text-color) !important;
-        }
-        
-        /* Form element styling */
-        .form-control {
-            background-color: var(--input-bg) !important;
-            border-color: var(--glass-border) !important;
-            color: var(--text-color) !important;
-        }
-        
-        .form-control:focus {
-            box-shadow: 0 0 0 0.25rem var(--glass-border-focus) !important;
-            border-color: var(--glass-border-focus) !important;
-        }
-        
-        /* Make sure only our custom Tailwind navigation is visible */
-        #main-navigation {
-            display: block !important;
-        }
-        
-        /* Completely hide any unexpected navigation */
-        body > nav:not(#main-navigation),
-        main > nav:not(#main-navigation),
-        header > nav:not(#main-navigation),
-        div > nav:not(#main-navigation) {
-            display: none !important;
-            height: 0 !important;
-            visibility: hidden !important;
-            opacity: 0 !important;
-            overflow: hidden !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-    </style>
+    <title>Contact | Nana Kwame Yiadom Boachie</title>
+    <meta name="description" content="Get in touch on WhatsApp or email about a website, payments or engineering software.">
+    <meta property="og:title" content="Contact | Nana Kwame Yiadom Boachie">
+    <meta property="og:description" content="Get in touch on WhatsApp or email about a website, payments or engineering software.">
+    <meta property="og:image" content="https://nana-boachie.github.io/my_portfolio/assets/img/profile.jpg">
+    <meta name="theme-color" content="#0b1220">
+    <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}var r=document.documentElement;r.setAttribute('data-theme',t);r.classList.add('js')})();</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/site.css">
 </head>
-<body class="has-glassy-theme">
-    <!-- Only include Bootstrap JS at the end of the body to avoid conflicts -->
-    <main class="main-content">
-        <!-- Navigation with Tailwind CSS and Glassy UI -->
-        <nav id="main-navigation" class="bg-glass text-white sticky top-0 z-50">
-            <div class="container mx-auto px-4">
-                <div class="flex items-center justify-between py-4">
-                    <a href="../../index.html" class="text-xl font-bold">Yiadom</a>
-                    
-                    <!-- Mobile menu button -->
-                    <div class="md:hidden">
-                        <button id="mobile-menu-button" class="text-white focus:outline-none">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    
-                    <!-- Desktop menu -->
-                    <div class="hidden md:flex md:items-center md:space-x-6">
-                        <a href="../../index.html" class="text-white hover:text-gray-300">Home</a>
-                        <a href="about.html" class="text-white hover:text-gray-300">About</a>
-                        <a href="projects.html" class="text-white hover:text-gray-300">Projects</a>
-                        <a href="skills.html" class="text-white hover:text-gray-300">Skills</a>
-                        <a href="certifications.html" class="text-white hover:text-gray-300">Certifications</a>
-                        <a href="../blog.html" class="text-white hover:text-gray-300">Blog</a>
-                        <a href="contact.html" class="text-white hover:text-gray-300 font-medium">Contact</a>
-                    </div>
-                </div>
-                
-                <!-- Mobile menu (hidden by default) -->
-                <div id="mobile-menu" class="hidden pb-4 md:hidden">
-                    <div class="flex flex-col space-y-3">
-                        <a href="../../index.html" class="text-white hover:text-gray-300">Home</a>
-                        <a href="about.html" class="text-white hover:text-gray-300">About</a>
-                        <a href="projects.html" class="text-white hover:text-gray-300">Projects</a>
-                        <a href="skills.html" class="text-white hover:text-gray-300">Skills</a>
-                        <a href="certifications.html" class="text-white hover:text-gray-300">Certifications</a>
-                        <a href="../blog.html" class="text-white hover:text-gray-300">Blog</a>
-                        <a href="contact.html" class="text-white hover:text-gray-300 font-medium">Contact</a>
-                    </div>
-                </div>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../../index.html" aria-label="Yiadom, home">
+                <span class="brand-mark">NY</span>
+                <span>Yiadom</span>
+            </a>
+            <nav class="nav" aria-label="Main">
+                <a href="../../index.html">Home</a>
+                <a href="../../pages/sections/services.html">Services</a>
+                <a href="../../pages/sections/projects.html">Work</a>
+                <a href="../../pages/sections/about.html">About</a>
+                <a href="../../pages/blog.html">Blog</a>
+                <a href="../../pages/sections/contact.html" aria-current="page">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-btn theme-toggle" type="button" aria-label="Switch light or dark theme">
+                    <i class="fas fa-moon" aria-hidden="true"></i><i class="fas fa-sun" aria-hidden="true"></i>
+                </button>
+                <a class="btn btn-primary btn-sm" href="../../pages/sections/services.html">Hire me</a>
+                <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
             </div>
-        </nav>
+        </div>
+    </header>
 
-        <!-- Contact Section -->
-        <section class="section py-5">
+    <main id="main">
+        <section class="page-hero">
             <div class="container">
-                <!-- Page Header -->
-                <header class="page-header text-center mb-5">
-                    <h1 class="display-4 fw-bold">Contact Me</h1>
-                    <div class="divider mx-auto"></div>
-                    <p class="lead text-muted">Let's connect and discuss how we can work together</p>
-                </header>
-                
-                <div class="row justify-content-center">
-                    <!-- Contact Form -->
-                    <div class="col-lg-6 mb-4">
-                        <div class="card bg-glass shadow-lg border border-glass">
-                            <div class="card-header text-white" style="background-color: var(--glass-header-bg);">
-                                <h3 class="h5 mb-0"><i class="fas fa-paper-plane me-2"></i>Send a Message</h3>
-                            </div>
-                            <div class="card-body">
-                                <form id="contactForm">
-                                    <div class="mb-3">
-                                        <label for="name" class="form-label">Your Name</label>
-                                        <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">Your Email</label>
-                                        <input type="email" class="form-control" id="email" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="subject" class="form-label">Subject</label>
-                                        <input type="text" class="form-control" id="subject" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="message" class="form-label">Message</label>
-                                        <textarea class="form-control" id="message" rows="5" required></textarea>
-                                    </div>
-                                    <button type="submit" class="btn" style="background-color: var(--secondary-color); color: white;">Submit Message</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Contact Information -->
-                    <div class="col-lg-4">
-                        <div class="card shadow-sm mb-4">
-                            <div class="card-header text-white" style="background-color: var(--primary-color);">
-                                <h3 class="h5 mb-0"><i class="fas fa-id-card me-2"></i>Contact Details</h3>
-                            </div>
-                            <div class="card-body">
-                                <ul class="list-group list-group-flush contact-list">
-                                    <li class="list-group-item">
-                                        <div class="d-flex">
-                                            <div class="contact-icon me-3">
-                                                <i class="fas fa-phone text-primary"></i>
-                                            </div>
-                                            <div>
-                                                <h5 class="mb-0">Phone</h5>
-                                                <p class="mb-0">+233 55 9808201</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="d-flex">
-                                            <div class="contact-icon me-3">
-                                                <i class="fas fa-envelope text-primary"></i>
-                                            </div>
-                                            <div>
-                                                <h5 class="mb-0">Email</h5>
-                                                <p class="mb-0">nana.kwame.yiadom@gmail.com</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="d-flex">
-                                            <div class="contact-icon me-3">
-                                                <i class="fas fa-map-marker-alt text-primary"></i>
-                                            </div>
-                                            <div>
-                                                <h5 class="mb-0">Location</h5>
-                                                <p class="mb-0">Accra, Ghana</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <!-- Social Links -->
-                        <div class="card bg-glass shadow-lg border border-glass">
-                            <div class="card-header text-white" style="background-color: var(--glass-header-bg);">
-                                <h3 class="h5 mb-0"><i class="fas fa-share-alt me-2"></i>Social Media</h3>
-                            </div>
-                            <div class="card-body">
-                                <div class="social-links">
-                                    <a href="https://x.com/theloved_1" target="_blank" class="btn mb-2 d-flex align-items-center" style="border-color: var(--accent-color); color: var(--accent-color);">
-                                        <i class="fab fa-twitter me-2"></i> Twitter
-                                    </a>
-                                    <a href="https://facebook.com/NanaKwameYiadomBoachie" target="_blank" class="btn mb-2 d-flex align-items-center" style="border-color: var(--secondary-color); color: var(--secondary-color);">
-                                        <i class="fab fa-facebook me-2"></i> Facebook
-                                    </a>
-                                    <a href="https://github.com/nana-boachie" target="_blank" class="btn mb-2 d-flex align-items-center" style="border-color: var(--primary-color); color: var(--primary-color);">
-                                        <i class="fab fa-github me-2"></i> GitHub
-                                    </a>
-                                    <a href="https://linkedin.com/in/NanaKwameYiadomBoachie" target="_blank" class="btn mb-2 d-flex align-items-center" style="border-color: var(--accent-color); color: var(--accent-color);">
-                                        <i class="fab fa-linkedin me-2"></i> LinkedIn
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <span class="eyebrow">Contact</span>
+                <h1>Let's work together</h1>
+                <p class="lead">Tell me about your project. WhatsApp is the fastest way to reach me.</p>
             </div>
         </section>
 
-        <!-- Back to top button -->
-        <button class="fixed bottom-6 right-6 bg-purple-600 text-white rounded-full p-3 shadow-lg hover:bg-purple-700 focus:outline-none z-50" id="back-to-top">
-            <i class="fas fa-arrow-up"></i>
-        </button>
-    </main>
-    
-    <!-- Footer with Tailwind CSS --> 
-    <footer class="bg-gray-900 text-white py-8" id="site-footer">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center md:justify-between">
-                <div class="w-full md:w-1/3 text-center md:text-left mb-4 md:mb-0">
-                    <p>&copy; 2025 ING. Nana Kwame Yiadom Boachie. All rights reserved.</p>
-                </div>
-                
-                <div class="w-full md:w-1/3 text-center mb-4 md:mb-0">
-                    <div class="flex justify-center space-x-4">
-                        <a href="https://x.com/theloved_1" target="_blank" class="text-white hover:text-gray-300">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="https://facebook.com/NanaKwameYiadomBoachie" target="_blank" class="text-white hover:text-gray-300">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
-                        <a href="https://github.com/nana-boachie" target="_blank" class="text-white hover:text-gray-300">
-                            <i class="fab fa-github text-xl"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/NanaKwameYiadomBoachie" target="_blank" class="text-white hover:text-gray-300">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
+        <section class="section" style="padding-top:0">
+            <div class="container contact-grid">
+                <form class="card" id="contact-form">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="name">Your name</label>
+                            <input id="name" name="name" type="text" autocomplete="name" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Your email</label>
+                            <input id="email" name="email" type="email" autocomplete="email">
+                        </div>
                     </div>
-                </div>
-                
-                <div class="w-full md:w-1/3 text-center md:text-right">
-                    <p>Designed with ❤️ by ING. Nana Kwame Yiadom Boachie</p>
-                </div>
+                    <div class="form-field">
+                        <label for="subject">What do you need?</label>
+                        <select id="subject" name="subject">
+                            <option>A website for my business</option>
+                            <option>Online payments (MoMo / card)</option>
+                            <option>An engineering tool or dashboard</option>
+                            <option>IT support</option>
+                            <option>Something else</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="A few lines about your business and what you'd like built"></textarea>
+                    </div>
+                    <div class="btn-row">
+                        <button class="btn btn-whatsapp" type="submit" value="whatsapp"><i class="fab fa-whatsapp"></i> Send on WhatsApp</button>
+                        <button class="btn btn-secondary" type="submit" value="email"><i class="fas fa-envelope"></i> Send by email</button>
+                    </div>
+                </form>
+
+                <aside class="card">
+                    <h3>Contact details</h3>
+                    <ul class="contact-list">
+                        <li><span class="card-icon"><i class="fab fa-whatsapp"></i></span><div><span>WhatsApp &amp; phone</span><a href="https://wa.me/233559808201" target="_blank" rel="noopener">+233 55 980 8201</a></div></li>
+                        <li><span class="card-icon"><i class="fas fa-envelope"></i></span><div><span>Email</span><a href="mailto:nana.kwame.yiadom@gmail.com">nana.kwame.yiadom@gmail.com</a></div></li>
+                        <li><span class="card-icon"><i class="fas fa-location-dot"></i></span><div><span>Location</span><strong>Accra, Ghana</strong></div></li>
+                    </ul>
+                </aside>
             </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a class="brand" href="../../index.html">
+                <span class="brand-mark">NY</span>
+                <span>Nana Kwame Yiadom Boachie</span>
+            </a>
+            <nav class="footer-links" aria-label="Footer">
+                <a href="../../pages/sections/services.html">Services</a>
+                <a href="../../pages/sections/projects.html">Work</a>
+                <a href="../../pages/sections/skills.html">Skills</a>
+                <a href="../../pages/sections/certifications.html">Certifications</a>
+                <a href="../../pages/blog.html">Blog</a>
+                <a href="../../pages/sections/contact.html">Contact</a>
+            </nav>
+            <div class="socials">
+                <a href="https://github.com/nana-boachie" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/NanaKwameYiadomBoachie" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/theloved_1" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://facebook.com/NanaKwameYiadomBoachie" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <p class="copyright">&copy; <span data-year>2026</span> Nana Kwame Yiadom Boachie &middot; Accra, Ghana</p>
         </div>
     </footer>
 
-    <script src="../../script.js"></script>
-    <!-- Common UI components script -->
-    <script src="../../ui-components.js"></script>
-    <!-- Theme toggler script -->
-    <script src="../../theme-switcher.js" defer></script>
-    <!-- Enhanced Theme Switcher with multiple themes -->
-    <script src="../../enhanced-theme-switcher.js" defer></script>
-    <!-- Bootstrap JS at the end to avoid conflicts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Simple form validation
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const subject = document.getElementById('subject').value.trim();
-            const message = document.getElementById('message').value.trim();
-            
-            if (!name || !email || !subject || !message) {
-                alert('Please fill in all fields');
-                return;
-            }
-            
-            // Email validation with regex
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Please enter a valid email address');
-                return;
-            }
-            
-            // Show success message
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
-            submitBtn.disabled = true;
-            
-            // Simulate form submission (in a real site, this would connect to a backend)
-            setTimeout(() => {
-                alert('Thank you for your message! I will get back to you soon.');
-                this.reset();
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            }, 1000);
-        });
-    </script>
+    <script src="../../assets/js/site.js"></script>
 </body>
 </html>

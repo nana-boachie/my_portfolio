@@ -3,204 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yiadom - Professional Certifications and Qualifications">
     <title>Certifications | Nana Kwame Yiadom Boachie</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../../styles.css">
-    <!-- Purple Theme CSS -->
-    <link rel="stylesheet" href="../../purple-theme.css">
-    <!-- shadcn Theme CSS -->
-    <link rel="stylesheet" href="../../shadcn-theme.css">
-    <!-- Theme Styles (Light/Dark) -->
-    <link rel="stylesheet" href="../../theme-styles.css">
+    <meta name="description" content="Certifications in IT support, networking and power systems engineering.">
+    <meta property="og:title" content="Certifications | Nana Kwame Yiadom Boachie">
+    <meta property="og:description" content="Certifications in IT support, networking and power systems engineering.">
+    <meta property="og:image" content="https://nana-boachie.github.io/my_portfolio/assets/img/profile.jpg">
+    <meta name="theme-color" content="#0b1220">
+    <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}var r=document.documentElement;r.setAttribute('data-theme',t);r.classList.add('js')})();</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/site.css">
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-    <main class="main-content">
-        <!-- Navigation with Tailwind CSS -->
-        <nav class="bg-gray-900 text-white sticky top-0 z-50">
-            <div class="container mx-auto px-4">
-                <div class="flex items-center justify-between py-4">
-                    <a href="../../index.html" class="text-xl font-bold">Yiadom</a>
-                    
-                    <!-- Mobile menu button -->
-                    <div class="md:hidden">
-                        <button id="mobile-menu-button" class="text-white focus:outline-none">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    
-                    <!-- Desktop menu -->
-                    <div class="hidden md:flex md:items-center md:space-x-6">
-                        <a href="../../index.html" class="text-white hover:text-gray-300">Home</a>
-                        <a href="about.html" class="text-white hover:text-gray-300">About</a>
-                        <a href="projects.html" class="text-white hover:text-gray-300">Projects</a>
-                        <a href="skills.html" class="text-white hover:text-gray-300">Skills</a>
-                        <a href="certifications.html" class="text-white hover:text-gray-300 font-medium">Certifications</a>
-                        <a href="../blog.html" class="text-white hover:text-gray-300">Blog</a>
-                        <a href="contact.html" class="text-white hover:text-gray-300">Contact</a>
-                    </div>
-                </div>
-                
-                <!-- Mobile menu (hidden by default) -->
-                <div id="mobile-menu" class="hidden pb-4 md:hidden">
-                    <div class="flex flex-col space-y-3">
-                        <a href="../../index.html" class="text-white hover:text-gray-300">Home</a>
-                        <a href="about.html" class="text-white hover:text-gray-300">About</a>
-                        <a href="projects.html" class="text-white hover:text-gray-300">Projects</a>
-                        <a href="skills.html" class="text-white hover:text-gray-300">Skills</a>
-                        <a href="certifications.html" class="text-white hover:text-gray-300 font-medium">Certifications</a>
-                        <a href="../blog.html" class="text-white hover:text-gray-300">Blog</a>
-                        <a href="contact.html" class="text-white hover:text-gray-300">Contact</a>
-                    </div>
-                </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../../index.html" aria-label="Yiadom, home">
+                <span class="brand-mark">NY</span>
+                <span>Yiadom</span>
+            </a>
+            <nav class="nav" aria-label="Main">
+                <a href="../../index.html">Home</a>
+                <a href="../../pages/sections/services.html">Services</a>
+                <a href="../../pages/sections/projects.html">Work</a>
+                <a href="../../pages/sections/about.html" aria-current="page">About</a>
+                <a href="../../pages/blog.html">Blog</a>
+                <a href="../../pages/sections/contact.html">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-btn theme-toggle" type="button" aria-label="Switch light or dark theme">
+                    <i class="fas fa-moon" aria-hidden="true"></i><i class="fas fa-sun" aria-hidden="true"></i>
+                </button>
+                <a class="btn btn-primary btn-sm" href="../../pages/sections/services.html">Hire me</a>
+                <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
             </div>
-        </nav>
+        </div>
+    </header>
 
-        <!-- Certifications Section -->
-        <section class="section py-5">
+    <main id="main">
+        <section class="page-hero">
             <div class="container">
-                <!-- Page Header -->
-                <header class="page-header text-center mb-5">
-                    <h1 class="display-4 fw-bold">Certifications</h1>
-                    <div class="divider mx-auto"></div>
-                    <p class="lead text-muted">Professional qualifications and achievements</p>
-                </header>
-                
-                <div class="row justify-content-center">
-                    <!-- Google IT Support Professional Certificate -->
-                    <div class="col-lg-6 mb-4">
-                        <div class="card h-100 shadow-sm rounded">
-                            <div class="card-header bg-primary text-white">
-                                <div class="d-flex align-items-center">
-                                    <i class="fab fa-google fa-2x me-3"></i>
-                                    <h3 class="h5 card-title mb-0">Google IT Support Professional Certificate</h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">Completed comprehensive training in IT support fundamentals, networking, and system administration.</p>
-                                <ul class="list-group list-group-flush mb-3">
-                                    <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Technical Support Fundamentals</li>
-                                    <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Computer Networking</li>
-                                    <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Operating Systems</li>
-                                    <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>System Administration</li>
-                                    <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>IT Security</li>
-                                </ul>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">Issued: January 2023</small>
-                                    <a href="#" class="btn btn-outline-primary btn-sm">View Credential</a>
-                                </div>
-                            </div>
+                <span class="eyebrow">Certifications</span>
+                <h1>Certifications</h1>
+                <p class="lead">Professional qualifications in IT support, networking and power systems engineering.</p>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <div class="grid" style="max-width:820px">
+                    <article class="card cert reveal">
+                        <div class="card-icon"><i class="fas fa-headset"></i></div>
+                        <div>
+                            <h3>Google IT Support Professional Certificate</h3>
+                            <p class="cert-meta">Issued January 2023</p>
+                            <p class="muted">Training in IT support fundamentals, networking, operating systems and system administration.</p>
+                            <ul class="tags"><li class="tag">Technical support</li><li class="tag">Networking</li><li class="tag">Operating systems</li><li class="tag">System administration</li><li class="tag">IT security</li></ul>
                         </div>
-                    </div>
-                    
-                    <!-- Google Networking Certificate -->
-                    <div class="col-lg-6 mb-4">
-                        <div class="card h-100 shadow-sm rounded">
-                            <div class="card-header bg-primary text-white">
-                                <div class="d-flex align-items-center">
-                                    <i class="fab fa-google fa-2x me-3"></i>
-                                    <h3 class="h5 card-title mb-0">Google Networking Certificate</h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">Expertise in network infrastructure, security, and troubleshooting.</p>
-                                <ul class="list-group list-group-flush mb-3">
-                                    <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Network Protocols</li>
-                                    <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Network Security</li>
-                                    <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Troubleshooting Methodologies</li>
-                                    <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Network Management</li>
-                                </ul>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">Issued: March 2023</small>
-                                    <a href="#" class="btn btn-outline-primary btn-sm">View Credential</a>
-                                </div>
-                            </div>
+                    </article>
+                    <article class="card cert reveal">
+                        <div class="card-icon"><i class="fas fa-network-wired"></i></div>
+                        <div>
+                            <h3>Google Networking Certificate</h3>
+                            <p class="cert-meta">Issued March 2023</p>
+                            <p class="muted">Network infrastructure, security and troubleshooting.</p>
+                            <ul class="tags"><li class="tag">Network protocols</li><li class="tag">Network security</li><li class="tag">Troubleshooting</li><li class="tag">Network management</li></ul>
                         </div>
-                    </div>
-                    
-                    <!-- Electrical Engineering Certification -->
-                    <div class="col-lg-6 mb-4">
-                        <div class="card h-100 shadow-sm rounded">
-                            <div class="card-header bg-warning text-dark">
-                                <div class="d-flex align-items-center">
-                                    <i class="fas fa-bolt fa-2x me-3"></i>
-                                    <h3 class="h5 card-title mb-0">Electrical Engineering Professional</h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">Advanced certification in power systems engineering and protection systems.</p>
-                                <ul class="list-group list-group-flush mb-3">
-                                    <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Power Systems Protection</li>
-                                    <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Relay Technology</li>
-                                    <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Substation Design</li>
-                                    <li class="list-group-item"><i class="fas fa-check-circle text-success me-2"></i>Grid Stability Analysis</li>
-                                </ul>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">Issued: May 2022</small>
-                                    <a href="#" class="btn btn-outline-warning btn-sm">View Credential</a>
-                                </div>
-                            </div>
+                    </article>
+                    <article class="card cert reveal">
+                        <div class="card-icon"><i class="fas fa-bolt"></i></div>
+                        <div>
+                            <h3>Electrical Engineering Professional</h3>
+                            <p class="cert-meta">Issued May 2022</p>
+                            <p class="muted">Advanced certification in power systems engineering and protection systems.</p>
+                            <ul class="tags"><li class="tag">Power systems protection</li><li class="tag">Relay technology</li><li class="tag">Substation design</li><li class="tag">Grid stability</li></ul>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Back to top button -->
-        <button class="fixed bottom-6 right-6 bg-purple-600 text-white rounded-full p-3 shadow-lg hover:bg-purple-700 focus:outline-none z-50" id="back-to-top">
-            <i class="fas fa-arrow-up"></i>
-        </button>
-    </main>
-    
-    <!-- Footer with Tailwind CSS --> 
-    <footer class="bg-gray-900 text-white py-8" id="site-footer">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center md:justify-between">
-                <div class="w-full md:w-1/3 text-center md:text-left mb-4 md:mb-0">
-                    <p>&copy; 2025 Nana Kwame Yiadom Boachie. All rights reserved.</p>
-                </div>
-                
-                <div class="w-full md:w-1/3 text-center mb-4 md:mb-0">
-                    <div class="flex justify-center space-x-4">
-                        <a href="https://x.com/theloved_1" target="_blank" class="text-white hover:text-gray-300">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="https://facebook.com/NanaKwameYiadomBoachie" target="_blank" class="text-white hover:text-gray-300">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
-                        <a href="https://github.com/nana-boachie" target="_blank" class="text-white hover:text-gray-300">
-                            <i class="fab fa-github text-xl"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/NanaKwameYiadomBoachie" target="_blank" class="text-white hover:text-gray-300">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
+        <section class="section">
+            <div class="container">
+                <div class="cta reveal">
+                    <div>
+                        <h2>Have a project in mind?</h2>
+                        <p>Tell me about your business or the tool your team needs. I usually reply the same day.</p>
                     </div>
-                </div>
-                
-                <div class="w-full md:w-1/3 text-center md:text-right">
-                    <div class="flex justify-center md:justify-end space-x-4">
-                        <a href="../../index.html" class="text-white hover:text-gray-300">Home</a>
-                        <a href="about.html" class="text-white hover:text-gray-300">About</a>
-                        <a href="contact.html" class="text-white hover:text-gray-300">Contact</a>
+                    <div class="btn-row">
+                        <a class="btn btn-whatsapp btn-lg" href="https://wa.me/233559808201?text=Hello%20Yiadom%2C%20I%20would%20like%20a%20website%20for%20my%20business." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                        <a class="btn btn-secondary btn-lg" href="../../pages/sections/contact.html">Send an email</a>
                     </div>
                 </div>
             </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a class="brand" href="../../index.html">
+                <span class="brand-mark">NY</span>
+                <span>Nana Kwame Yiadom Boachie</span>
+            </a>
+            <nav class="footer-links" aria-label="Footer">
+                <a href="../../pages/sections/services.html">Services</a>
+                <a href="../../pages/sections/projects.html">Work</a>
+                <a href="../../pages/sections/skills.html">Skills</a>
+                <a href="../../pages/sections/certifications.html">Certifications</a>
+                <a href="../../pages/blog.html">Blog</a>
+                <a href="../../pages/sections/contact.html">Contact</a>
+            </nav>
+            <div class="socials">
+                <a href="https://github.com/nana-boachie" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/NanaKwameYiadomBoachie" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/theloved_1" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://facebook.com/NanaKwameYiadomBoachie" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <p class="copyright">&copy; <span data-year>2026</span> Nana Kwame Yiadom Boachie &middot; Accra, Ghana</p>
         </div>
     </footer>
 
-    <script src="../../script.js"></script>
-    <!-- Common UI components script -->
-    <script src="../../ui-components.js"></script>
-    <!-- Theme Toggle Script -->
-    <script src="../../theme-switcher.js"></script>
+    <script src="../../assets/js/site.js"></script>
 </body>
 </html>

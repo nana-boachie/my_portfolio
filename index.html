@@ -3,247 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yiadom - Electrical Engineer & IT Expert Portfolio">
-    <title>Nana Kwame Yiadom Boachie | Electrical Engineer & IT Expert</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- Purple Theme CSS -->
-    <link rel="stylesheet" href="purple-theme.css">
-    <!-- shadcn Theme CSS -->
-    <link rel="stylesheet" href="shadcn-theme.css">
-    <!-- Theme Styles (Light/Dark) -->
-    <link rel="stylesheet" href="theme-styles.css">
-    <!-- Chart.js for Skills Visualization -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Nana Kwame Yiadom Boachie | Engineer & Web Developer</title>
+    <meta name="description" content="Power systems protection engineer and web developer in Accra, Ghana. Websites with Mobile Money payments for businesses, and software for engineering teams.">
+    <meta property="og:title" content="Nana Kwame Yiadom Boachie | Engineer & Web Developer">
+    <meta property="og:description" content="Power systems protection engineer and web developer in Accra, Ghana. Websites with Mobile Money payments for businesses, and software for engineering teams.">
+    <meta property="og:image" content="https://nana-boachie.github.io/my_portfolio/assets/img/profile.jpg">
+    <meta name="theme-color" content="#0b1220">
+    <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}var r=document.documentElement;r.setAttribute('data-theme',t);r.classList.add('js')})();</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-    <main class="main-content">
-        <!-- Navigation with Tailwind CSS -->
-        <nav class="bg-gray-900 text-white sticky top-0 z-50">
-            <div class="container mx-auto px-4">
-                <div class="flex items-center justify-between py-4">
-                    <a href="index.html" class="text-xl font-bold">Yiadom</a>
-                    
-                    <!-- Mobile menu button -->
-                    <div class="md:hidden">
-                        <button id="mobile-menu-button" class="text-white focus:outline-none">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    
-                    <!-- Desktop menu -->
-                    <div class="hidden md:flex md:items-center md:space-x-6">
-                        <a href="index.html" class="text-white hover:text-gray-300 font-medium">Home</a>
-                        <a href="pages/sections/about.html" class="text-white hover:text-gray-300">About</a>
-                        <a href="pages/sections/projects.html" class="text-white hover:text-gray-300">Projects</a>
-                        <a href="pages/sections/skills.html" class="text-white hover:text-gray-300">Skills</a>
-                        <a href="pages/sections/certifications.html" class="text-white hover:text-gray-300">Certifications</a>
-                        <a href="pages/blog.html" class="text-white hover:text-gray-300">Blog</a>
-                        <a href="pages/sections/contact.html" class="text-white hover:text-gray-300">Contact</a>
-                    </div>
-                </div>
-                
-                <!-- Mobile menu (hidden by default) -->
-                <div id="mobile-menu" class="hidden pb-4 md:hidden">
-                    <div class="flex flex-col space-y-3">
-                        <a href="index.html" class="text-white hover:text-gray-300 font-medium">Home</a>
-                        <a href="pages/sections/about.html" class="text-white hover:text-gray-300">About</a>
-                        <a href="pages/sections/projects.html" class="text-white hover:text-gray-300">Projects</a>
-                        <a href="pages/sections/skills.html" class="text-white hover:text-gray-300">Skills</a>
-                        <a href="pages/sections/certifications.html" class="text-white hover:text-gray-300">Certifications</a>
-                        <a href="pages/blog.html" class="text-white hover:text-gray-300">Blog</a>
-                        <a href="pages/sections/contact.html" class="text-white hover:text-gray-300">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Hero Section -->
-        <section id="home" class="hero py-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-4 text-center mb-4 mb-md-0">
-                        <img src="images/profile-placeholder.jpg" alt="Nana Kwame Yiadom Boachie" class="img-fluid shadow-lg rounded-circle" width="250" height="250" loading="lazy" style="border: 3px solid white; aspect-ratio: 1; object-fit: cover;">
-                    </div>
-                    <div class="col-md-8 text-center text-md-start">
-                        <h1 class="display-4 fw-bold">Nana Kwame Yiadom Boachie</h1>
-                        <p class="lead mb-4">Electrical Engineer | IT Expert</p>
-                        <div class="d-flex justify-content-center justify-content-md-start gap-2 rounded">
-                            <a href="pages/sections/contact.html" class="btn btn-primary">Contact Me</a>
-                            <a href="pages/blog.html" class="btn btn-light font-bold text-purple-800">View My Blog</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Sections Preview -->
-        <section class="section py-5">
-            <div class="container">
-                <h2 class="text-center mb-5">Welcome to My Portfolio</h2>
-                <div class="row g-4">
-                    <!-- About Section Preview -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100 shadow hover-card">
-                            <div class="card-body text-center">
-                                <div class="section-icon mb-3">
-                                    <i class="fas fa-user fa-3x text-primary"></i>
-                                </div>
-                                <h3 class="card-title h4">About Me</h3>
-                                <p class="card-text">Learn more about my background, experience, and what drives my passion for electrical engineering and IT.</p>
-                                <a href="pages/sections/about.html" class="btn btn-outline-primary mt-3">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Projects Section Preview -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100 shadow hover-card">
-                            <div class="card-body text-center">
-                                <div class="section-icon mb-3">
-                                    <i class="fas fa-project-diagram fa-3x text-success"></i>
-                                </div>
-                                <h3 class="card-title h4">Projects</h3>
-                                <p class="card-text">Explore my professional experience and key projects in electrical engineering and IT fields.</p>
-                                <a href="pages/sections/projects.html" class="btn btn-outline-success mt-3">View Projects</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Certifications Section Preview -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100 shadow hover-card">
-                            <div class="card-body text-center">
-                                <div class="section-icon mb-3">
-                                    <i class="fas fa-certificate fa-3x text-warning"></i>
-                                </div>
-                                <h3 class="card-title h4">Certifications</h3>
-                                <p class="card-text">View my professional certifications and qualifications in electrical engineering and IT support.</p>
-                                <a href="pages/sections/certifications.html" class="btn btn-outline-warning mt-3">View Certifications</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Skills Section Preview -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100 shadow hover-card">
-                            <div class="card-body text-center">
-                                <div class="section-icon mb-3">
-                                    <i class="fas fa-chart-bar fa-3x text-danger"></i>
-                                </div>
-                                <h3 class="card-title h4">Skills</h3>
-                                <p class="card-text">See a detailed visualization of my technical skills across web development, electrical engineering, and IT support.</p>
-                                <a href="pages/sections/skills.html" class="btn btn-outline-danger mt-3">View Skills</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Blog Section Preview -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100 shadow hover-card">
-                            <div class="card-body text-center">
-                                <div class="section-icon mb-3">
-                                    <i class="fas fa-blog fa-3x text-info"></i>
-                                </div>
-                                <h3 class="card-title h4">Blog</h3>
-                                <p class="card-text">Read my latest articles, tutorials, and insights on electrical engineering, IT, and programming topics.</p>
-                                <a href="pages/blog.html" class="btn btn-outline-info mt-3">Read My Blog</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Contact Section Preview -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100 shadow hover-card">
-                            <div class="card-body text-center">
-                                <div class="section-icon mb-3">
-                                    <i class="fas fa-envelope fa-3x text-primary"></i>
-                                </div>
-                                <h3 class="card-title h4">Contact</h3>
-                                <p class="card-text">Get in touch with me for professional inquiries, collaborations, or just to say hello!</p>
-                                <a href="pages/sections/contact.html" class="btn btn-outline-primary mt-3">Contact Me</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Content ends here -->
-    </main>
-    
-    <!-- Footer should be outside main - Using Tailwind for responsive display -->
-    <footer class="bg-gray-900 text-white py-8" id="site-footer">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center md:justify-between">
-                <div class="w-full md:w-1/3 text-center md:text-left mb-4 md:mb-0">
-                    <p>&copy; 2025 Nana Kwame Yiadom Boachie. All rights reserved.</p>
-                </div>
-                
-                <div class="w-full md:w-1/3 text-center mb-4 md:mb-0">
-                    <div class="flex justify-center space-x-4">
-                        <a href="https://x.com/theloved_1" target="_blank" class="text-white hover:text-gray-300">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="https://facebook.com/NanaKwameYiadomBoachie" target="_blank" class="text-white hover:text-gray-300">
-                            <i class="fab fa-facebook text-xl"></i>
-                        </a>
-                        <a href="https://github.com/nana-boachie" target="_blank" class="text-white hover:text-gray-300">
-                            <i class="fab fa-github text-xl"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/NanaKwameYiadomBoachie" target="_blank" class="text-white hover:text-gray-300">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="w-full md:w-1/3 text-center md:text-right">
-                    <div class="flex justify-center md:justify-end space-x-4">
-                        <a href="index.html" class="text-white hover:text-gray-300">Home</a>
-                        <a href="pages/sections/about.html" class="text-white hover:text-gray-300">About</a>
-                        <a href="pages/sections/contact.html" class="text-white hover:text-gray-300">Contact</a>
-                    </div>
-                </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="Yiadom, home">
+                <span class="brand-mark">NY</span>
+                <span>Yiadom</span>
+            </a>
+            <nav class="nav" aria-label="Main">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="pages/sections/services.html">Services</a>
+                <a href="pages/sections/projects.html">Work</a>
+                <a href="pages/sections/about.html">About</a>
+                <a href="pages/blog.html">Blog</a>
+                <a href="pages/sections/contact.html">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-btn theme-toggle" type="button" aria-label="Switch light or dark theme">
+                    <i class="fas fa-moon" aria-hidden="true"></i><i class="fas fa-sun" aria-hidden="true"></i>
+                </button>
+                <a class="btn btn-primary btn-sm" href="pages/sections/services.html">Hire me</a>
+                <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
+    </header>
+
+    <main id="main">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <span class="status-pill"><span class="status-dot"></span>Available for new projects</span>
+                    <h1>Websites and software that work as hard as you do.</h1>
+                    <p class="lead">I'm Nana Kwame Yiadom Boachie, a power systems protection engineer at GRIDCo and a web developer in Accra. I build websites with Mobile Money payments for Ghanaian businesses, and practical software for engineering teams.</p>
+                    <div class="btn-row">
+                        <a class="btn btn-primary btn-lg" href="pages/sections/services.html">See services &amp; prices</a>
+                        <a class="btn btn-secondary btn-lg" href="#work">View my work</a>
+                    </div>
+                    <div class="facts">
+                        <div class="fact"><strong>10</strong><span>GRIDCo substations with PMU/PDC systems</span></div>
+                        <div class="fact"><strong>30%</strong><span>faster outage response after protection upgrades</span></div>
+                        <div class="fact"><strong>2</strong><span>Google IT certificates</span></div>
+                    </div>
+                </div>
+                <div class="hero-photo">
+                    <img src="assets/img/profile.jpg" alt="Nana Kwame Yiadom Boachie" width="606" height="1080">
+                    <div class="hero-badge">
+                        <i class="fas fa-location-dot"></i>
+                        <div><strong>Accra, Ghana</strong><span class="muted">Working with clients everywhere</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">What I do</span>
+                    <h2>Engineering discipline, applied to the web.</h2>
+                    <p class="lead">The same care that keeps a transmission grid protected goes into every site and tool I ship: tested, reliable and easy to use.</p>
+                </div>
+                <div class="grid grid-3">
+                    <article class="card card-hover reveal">
+                        <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Business websites</h3>
+                        <p class="muted">Fast, mobile-first sites with your services, photos, location and one-tap WhatsApp and call buttons.</p>
+                    </article>
+                    <article class="card card-hover reveal">
+                        <div class="card-icon"><i class="fas fa-wallet"></i></div>
+                        <h3>MoMo &amp; card payments</h3>
+                        <p class="muted">Online ordering that accepts MTN MoMo, Telecel Cash, AirtelTigo Money and cards through Paystack or Hubtel.</p>
+                    </article>
+                    <article class="card card-hover reveal">
+                        <div class="card-icon"><i class="fas fa-bolt"></i></div>
+                        <h3>Engineering software</h3>
+                        <p class="muted">Calculators, dashboards and data tools for power and utility teams, built by a practising protection engineer.</p>
+                    </article>
+                </div>
+
+                <p style="margin-top:28px"><a class="text-link" href="pages/sections/services.html">See packages and prices <i class="fas fa-arrow-right"></i></a></p>
+            </div>
+        </section>
+
+        <section class="section" id="work">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Selected work</span>
+                    <h2>Recent projects</h2>
+                    <p class="lead">A client website and the engineering tools I build for my own field.</p>
+                </div>
+                <article class="work reveal">
+                    <div class="work-media">
+                        <img src="assets/img/deyands.jpg" alt="DEYANDS website home page" loading="lazy" width="800" height="506">
+                    </div>
+                    <div class="work-body">
+                        <span class="eyebrow">Client website</span>
+                        <h3>DEYANDS</h3>
+                        <p class="muted">Website for a Ghanaian family business offering G-Water bottled water, counseling, beauty, IT consulting and document services.</p>
+                        <ul class="check-list">
+                            <li>Home, about, contact and five service pages</li>
+                            <li>One-tap call and email, light and dark mode</li>
+                            <li>Automated tests, hosted on Vercel</li>
+                        </ul>
+                        <ul class="tags"><li class="tag">Python</li><li class="tag">Flask</li><li class="tag">Jinja</li><li class="tag">Vercel</li></ul>
+                        <a class="btn btn-secondary btn-sm" href="https://deyands-app.vercel.app" target="_blank" rel="noopener">Visit live site <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </article>
+
+                <article class="work reveal">
+                    <div class="work-media">
+                        <img src="assets/img/power-system-calculator.jpg" alt="Power System Calculator showing fault and protection study results" loading="lazy" width="1265" height="997">
+                    </div>
+                    <div class="work-body">
+                        <span class="eyebrow">Engineering software</span>
+                        <h3>Power System Calculator</h3>
+                        <p class="muted">A browser-based engineering calculator for power, fault, protection and coordination studies, with live results and graphical relay characteristics.</p>
+                        <ul class="check-list">
+                            <li>Runs entirely in the browser, no install</li>
+                            <li>Exact sample tables and graphical characteristics</li>
+                            <li>Opens legacy <code>.psc</code> study files</li>
+                        </ul>
+                        <ul class="tags"><li class="tag">TypeScript</li><li class="tag">Protection studies</li><li class="tag">Fault analysis</li></ul>
+                    </div>
+                </article>
+
+                <p style="margin-top:28px"><a class="text-link" href="pages/sections/projects.html">See all projects and experience <i class="fas fa-arrow-right"></i></a></p>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Experience</span>
+                    <h2>Power systems &amp; IT</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <span class="eyebrow">GRIDCo &middot; Substations</span>
+                        <h3>PMU/PDC installation &amp; configuration</h3>
+                        <p>Took part in installing and configuring Phasor Measurement Units and Phasor Data Concentrators across 10 GRIDCo substations, adding real-time monitoring and data collection for grid stability.</p>
+                        <ul class="tags"><li class="tag">PMU</li><li class="tag">PDC</li><li class="tag">Substation automation</li></ul>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <span class="eyebrow">GRIDCo &middot; Transmission</span>
+                        <h3>Power systems protection upgrades</h3>
+                        <p>Led protection system upgrades for critical transmission infrastructure, designing new schemes that cut outage response time by 30%.</p>
+                        <ul class="tags"><li class="tag">Relay protection</li><li class="tag">Fault detection</li><li class="tag">Reliability</li></ul>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <span class="eyebrow">IT infrastructure</span>
+                        <h3>Network infrastructure optimisation</h3>
+                        <p>Redesigned the corporate network across operational sites, improving data throughput and reducing latency.</p>
+                        <ul class="tags"><li class="tag">Network design</li><li class="tag">System integration</li></ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="cta reveal">
+                    <div>
+                        <h2>Have a project in mind?</h2>
+                        <p>Tell me about your business or the tool your team needs. I usually reply the same day.</p>
+                    </div>
+                    <div class="btn-row">
+                        <a class="btn btn-whatsapp btn-lg" href="https://wa.me/233559808201?text=Hello%20Yiadom%2C%20I%20would%20like%20a%20website%20for%20my%20business." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                        <a class="btn btn-secondary btn-lg" href="pages/sections/contact.html">Send an email</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">NY</span>
+                <span>Nana Kwame Yiadom Boachie</span>
+            </a>
+            <nav class="footer-links" aria-label="Footer">
+                <a href="pages/sections/services.html">Services</a>
+                <a href="pages/sections/projects.html">Work</a>
+                <a href="pages/sections/skills.html">Skills</a>
+                <a href="pages/sections/certifications.html">Certifications</a>
+                <a href="pages/blog.html">Blog</a>
+                <a href="pages/sections/contact.html">Contact</a>
+            </nav>
+            <div class="socials">
+                <a href="https://github.com/nana-boachie" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/NanaKwameYiadomBoachie" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/theloved_1" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://facebook.com/NanaKwameYiadomBoachie" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <p class="copyright">&copy; <span data-year>2026</span> Nana Kwame Yiadom Boachie &middot; Accra, Ghana</p>
+        </div>
     </footer>
-    
-    <!-- Back to top button with Tailwind CSS -->
-    <button class="fixed bottom-6 right-6 bg-purple-600 text-white rounded-full p-3 shadow-lg hover:bg-purple-700 focus:outline-none z-50" id="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
 
-    <!-- Custom JavaScript -->
-    <script src="script.js"></script>
-    
-    <!-- Common UI components script -->
-    <script src="ui-components.js"></script>
-    
-    <!-- Theme Toggle Script -->
-    <script src="theme-switcher.js"></script>
-
-    <style>
-        .hover-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .hover-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-        }
-        .section-icon {
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
+    <script src="assets/js/site.js"></script>
 </body>
 </html>
