@@ -973,6 +973,28 @@ p {
     margin: 4px 0 14px;
 }
 
+.cert-courses {
+    margin: 18px 0 24px;
+}
+
+.cert-courses a {
+    color: var(--ink);
+    font-weight: 500;
+}
+
+.cert-courses a:hover {
+    color: var(--accent);
+}
+
+.cert-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-card .cert-meta {
+    flex: 1;
+}
+
 /* Contact */
 .contact-grid {
     display: grid;
